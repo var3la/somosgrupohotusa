@@ -1,9 +1,5 @@
-<svg id="Componente_48_7" data-name="Componente 48 – 7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="33" viewBox="0 0 36 33">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectángulo_1206" data-name="Rectángulo 1206" width="36" height="33" fill="#00a79b"/>
-    </clipPath>
-  </defs>
+<svg id="Componente_48_7" data-name="Componente 48 – 7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 33">
+
   <g id="Grupo_7057" data-name="Grupo 7057" clip-path="url(#clip-path)">
     <path id="Trazado_53023" data-name="Trazado 53023" d="M.5,32.827V.5H35.765V32.827Zm1.176-1.078H34.59V1.578H1.676V31.749" transform="translate(-0.133 -0.163)" fill="#00a79b"/>
     <path id="Trazado_53024" data-name="Trazado 53024" d="M36,33H0V0H36ZM.735,32.327H35.265V.673H.735Zm34.09-.4H1.176V1.078H34.824ZM1.91,31.249H34.09V1.751H1.91Z" fill="#00a79b"/>

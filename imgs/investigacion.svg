@@ -1,9 +1,5 @@
-<svg id="Componente_45_5" data-name="Componente 45 – 5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.281" height="33" viewBox="0 0 37.281 33">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectángulo_1107" data-name="Rectángulo 1107" width="37.281" height="33" fill="#00a79b"/>
-    </clipPath>
-  </defs>
+<svg id="Componente_45_5" data-name="Componente 45 – 5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.281 33">
+
   <g id="Grupo_6963" data-name="Grupo 6963" clip-path="url(#clip-path)">
     <path id="Trazado_52997" data-name="Trazado 52997" d="M25.933,33H.717A.7.7,0,0,1,0,32.324V.676A.7.7,0,0,1,.717,0H19.472a.74.74,0,0,1,.507.2L26.44,6.29a.657.657,0,0,1,.21.478V13.9a.718.718,0,0,1-1.434,0V7.047l-6.04-5.7H1.434v30.3H25.216v-7.6a.718.718,0,0,1,1.434,0v8.276a.7.7,0,0,1-.717.676" fill="#00a79b"/>
     <path id="Trazado_52998" data-name="Trazado 52998" d="M359.34,7.449h-6.46a.7.7,0,0,1-.717-.676V.682a.7.7,0,0,1,.717-.676.74.74,0,0,1,.506.2l6.46,6.091a.649.649,0,0,1,0,.956.739.739,0,0,1-.507.2M353.6,6.1h4.013L353.6,2.314Z" transform="translate(-333.407 -0.006)" fill="#00a79b"/>
