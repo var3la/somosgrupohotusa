@@ -574,6 +574,7 @@
 .tpl-columnText .sta-columnText_title:empty{display: none;}
 .tpl-columnText .sta-columnText_title{font-size:27px;}
 .tpl-columnText .sta-columnText_title .title{font: 600 87px "Spectral", serif; color: #fff; margin-bottom: 30px;width: 100%;color:transparent;-webkit-text-stroke: 1px #00A79B;}
+
 .tpl-columnText article{padding-bottom:18px;transform: translateY(110px);opacity: 0;}
 .tpl-columnText.sta-animate article{transform: none;opacity: 1;transition: 1s;padding: 0;}
 .tpl-columnText article:last-of-type{padding-bottom:0}
@@ -1380,3 +1381,8 @@
   .tpl-goup > svg{width:24px;height:26px;}
 }
 /* FIN .tpl-goup */
+
+.tpl-photosHover-sgh{position:relative;overflow:hidden}
+.tpl-photosHover-sgh .sta-photosHover-sgh_max{padding:20px;}
+.tpl-photosHover-sgh .sta-photosHover-sgh_title{font-size:28px;text-align: center;padding-bottom:10px;}
+.tpl-photosHover-sgh .sta-photosHover-sgh_text{font-size:15px;text-align: center;}

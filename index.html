@@ -37,7 +37,8 @@
   <!-- CSS Critical -->
   <style>
   *{-moz-box-sizing:content-box;-ms-box-sizing:content-box;-o-box-sizing:content-box;-webkit-box-sizing:content-box;border:0;box-sizing:content-box;color:inherit;margin:0;padding:0}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font:12px 'Roboto',sans-serif;height:auto}body{cursor:default;font:12px 'Roboto',sans-serif;margin:0;width:100%}a{color:#0d2831;-moz-text-size-adjust:none;-ms-text-size-adjust:none;-webkit-text-size-adjust:none;background-color:transparent;text-decoration:none}a:hover{text-decoration:underline}address{font-style:normal}b,strong{font-weight:500}button,input,mark{background:none}button,label{cursor:pointer}li{list-style:none}img{border:0}button{overflow:visible;box-sizing:border-box;cursor:pointer;font-family:inherit;font-size:inherit;outline:0;text-align:center;background:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button,label{cursor:pointer}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}textarea{overflow:auto}:focus{outline:none}::-moz-focus-inner{border:0}main{padding-top:0!important;padding:0;position:relative;width:100%}mark{background:none}
-
+  /* fuente */
+  :root{--spectra:"Spectral", serif}
   .imgOculta{opacity:0;visibility:hidden;position:absolute;left:0;top:0;width:1px;height:1px}
   h1,h2,h3,h4,h5,h6{display:inline;font:inherit;margin:0;padding:0}
   .sta-inputFixed{position:fixed;left:-999px;top:0;opacity:0;height:0;width:0}
@@ -194,10 +195,6 @@
     .tpl-header-gh .sta-header-gh_max{max-width: 1018px;}
   }
   /* tpl-header-gh */
-
-
-
-
 /* .tpl-cabeText */
 @keyframes tplCabeText_arrow{
   0%,100%{margin-top:0}
@@ -206,14 +203,13 @@
 }
 .tpl-cabeText{font:17px/20px 'Roboto',sans-serif;color:#707070;background:#F5F5F5;overflow:hidden}
 .tpl-cabeText.v2{color:#fff;font-weight:bold;font-size:18px;position:relative}
-.tpl-cabeText.v3{background-color:#000;color:#fff}
-.tpl-cabeText .sta-cabeText_textMax{max-width:500px}
+.tpl-cabeText .sta-cabeText_textMax{padding: 20px;}
 .tpl-cabeText .sta-cabeText_textMax section{font-size: 14px;overflow: hidden;}
 .tpl-cabeText.v2 .sta-cabeText_textMax{max-width:none;position:relative;z-index:1;padding:85px 35px 60px 30px}
-.tpl-cabeText article{padding:20px 34px 20px 40px;transform:translateX(-300px);opacity:0}
+.tpl-cabeText article{transform:translateX(-300px);opacity:0}
 .tpl-cabeText.v2 article{padding:0 0 20px}
 .tpl-cabeText .sta-cabeText_subTitle{display:none}
-.tpl-cabeText article header{font:600 27px 'DM Serif Display';color:#162D60;margin-bottom:8px; font-weight: 500;}
+.tpl-cabeText article header{font-size:27px;color:#162D60;margin-bottom:8px; font-weight: 500;}
 .tpl-cabeText.v2 article header,
 .tpl-cabeText.v3 article header{color:#fff;padding-top: 30px;}
 .tpl-cabeText .sta-cabeText_goDown{display:none;width:64px;height:64px;background:#2B2B2B}
@@ -228,7 +224,7 @@
 .tpl-cabeText.sta-active article,
 .tpl-cabeText.sta-active .sta-cabeText_back,
 .tpl-cabeText.sta-active .sta-cabeText_goDown{transform:none;opacity:1;transition:transform 1s, opacity 1s;}
-.tpl-cabeText.sta-active .sta-cabeText_back{margin: 5px 40px 25px;height: 298px; width: 309px;}
+.tpl-cabeText.sta-active .sta-cabeText_back{margin:20px;width:100%;max-width:350px;height: 300px;}
 .tpl-cabeText .sta-cabeText_button{display: none;color: #00A79B;font-size: 11px;position: relative;margin: 20px 0 0; text-transform: uppercase;}
 
 .tpl-cabeText .sta-cabeText_button:after{content:'\e084';padding-left: inherit;font: 18px/1px Icons;padding-left: 10px;vertical-align: middle;transition: margin-top .5s;/* rotate: 90deg; */display: inline-block;margin-top: 0; content: none;}
@@ -236,7 +232,7 @@
 .tpl-cabeText .sta-cabeText_button.sta-show{display: inline-block;}
 .tpl-cabeText .sta-cabeText_button:hover.fn-readMore_bShort:after{margin-top: 0px;}
 .tpl-cabeText .sta-cabeText_button:hover.fn-readMore_bLong:after{margin-top: -12px;}
-.tpl-cabeText .sta-cabeText_firma{color:#162D60;font-size: 14px;padding: 20px 0 0;}
+.tpl-cabeText .sta-cabeText_firma{color: #fff;font-size: 10px;padding: 20px 0 0;position: absolute;z-index: 1;bottom: 10px;left: 10px;}
 
 @media(min-width:601px){
   .tpl-cabeText .sta-cabeText_textMax{max-width: 900px;}
@@ -280,9 +276,7 @@
   .tpl-cabeText.sta-active .sta-cabeText_back{width: 591px; height: 553px;}
   .tpl-cabeText article{padding-left: 90px;}
 }
-/* FIN .tpl-cabeText */
-
-  
+/* FIN .tpl-cabeText */  
   /* .tpl-cabecera-gh */
   .tpl-cabecera-gh{background:#fff;font:17px/20px 'Roboto',sans-serif;padding-top:100px;color:#707070;counter-reset:tplCabeceraGh}
   .tpl-cabecera-gh .sta-cabecera-gh_slide article{padding:30px;max-width:500px}
@@ -354,114 +348,6 @@
     .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_logo svg{width:294px;height:170px;transition: .3s;}
   }
   /* FIN .tpl-cabecera-gh */
-/* INICIO tpl-slideHome */
-@keyframes tpl-slideHome {
-  0% {transform: scale(1);opacity: .8}
-  100% {transform:scale(1.5);opacity: 0}
-}
-
-.js-displayNone{display: none}
-
-.tpl-slideHome{height: 309px;position:relative}
-.tpl-slideHome.v2{height: 540px}
-.tpl-slideHome .sta-slideHome_background{position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:0}
-.tpl-slideHome .sta-slideHome_backgroundContainer:after{content:'';position:absolute;left:0;top:0;right:0;bottom:0;z-index:3;}
-.tpl-slideHome .sta-slideHome_backgroundImage{position: absolute;left:0;top:0;right:0;bottom:0;background-position:center;background-size:cover;background-repeat:no-repeat;z-index:1}
-.tpl-slideHome .sta-slideHome_slideButtons{position:absolute;left:0;bottom:50px;right:0;z-index:1;text-align:center;z-index:10}
-.tpl-slideHome .sta-slideHome_slideRight:after,
-.tpl-slideHome .sta-slideHome_slideLeft:after{content: '\e084';padding-left: inherit;font: 20px / 1px Icons;padding-left: 10px;vertical-align: middle; color: #fff; display: inline-block;margin-top: -10px;}
-
-
- .tpl-slideHome .sta-slideHome_slideLeft:after{rotate: 180deg;display: inline-block;}
-/*.tpl-slideHome .sta-slideHome_slideRight:after{content: '\e000';} */
-.tpl-slideHome .sta-slideHome_slideLeft{display: inline-block;}
-.tpl-slideHome .sta-slideHome_slideRight{margin-left:260px; display: inline-block;}
-.tpl-slideHome .img-oculta{position: absolute;top: -99999px;left: -99999px;height: 1px;width: 1px}
-.tpl-slideHome .sta-slideHome_video{display:none;position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;visibility:hidden;opacity:0}
-.tpl-slideHome.sta-videoLoad .sta-slideHome_video{display:block}
-.tpl-slideHome.sta-videoLoad .sta-slideHome_video:after{content:'';position: absolute;left:0;top:0;right:0;bottom:0}
-.tpl-slideHome.sta-videoLoad .sta-slideHome_video{visibility:visible}
-.tpl-slideHome.sta-videoActive .sta-slideHome_video{opacity:1;transition:opacity 1s}
-.tpl-slideHome.sta-videoLoad .sta-slideHome_video .embed_youtube{object-fit: cover;object-position: center}
-.tpl-slideHome.sta-videoLoad.sta-notCover .sta-slideHome_video .embed_youtube{width:100%;height:100%}
-.tpl-slideHome.sta-cover.sta-videoLoad .sta-slideHome_video .embed_youtube{position:absolute;left:0;top:0;bottom:0;right:0;margin:auto}
-.tpl-slideHome.sta-videoLoad .sta-slideHome_video .wistia_embed{width:100%;height:100%}
-.tpl-slideHome.sta-videoLoad .sta-slideHome_video .wistia_embed video{object-fit: cover!important;object-position: center!important;width:100%;height:100%}
-.tpl-slideHome.sta-notCover.sta-videoLoad .sta-slideHome_video .wistia_embed video{object-fit: contain!important;object-position: center!important}
-.tpl-slideHome .sta-slideHome_mainContent{position: absolute;left:0;top:0;right:0;bottom:0;pointer-events:none}
-.tpl-slideHome .sta-slideHome_table{width:100%;height:100%}
-.tpl-slideHome .sta-slideHome_tableCell{display:flex;flex-wrap:wrap;align-items: flex-end;justify-content:center;text-align:center;transition:padding .5s;color:#fff;height: 100%;box-sizing: border-box}
-.tpl-slideHome .sta-slideHome_titlesContainer{margin: 0 20px;position:relative;z-index:3}
-.tpl-slideHome .sta-slideHome_videoButton{display:none;height: 60px;width: 60px;background: #2B2B2B;border-radius: 50%;position: relative}
-.tpl-slideHome .sta-slideHome_videoButton:before {content: '';position: absolute;left: 0;top: 0;right: 0;bottom: 0;background: inherit;border-radius: 50%;animation: tpl-slideHome 1.5s ease-out infinite}
-.tpl-slideHome .sta-slideHome_videoButton:after {content: '';position: absolute;left: 23px;top: 18px;border-left: 18px solid #fff;border-top: 12px solid transparent;border-bottom: 12px solid transparent}
-.tpl-slideHome .sta-slideHome_title,
-.tpl-slideHome .sta-slideHome_supTitle{font:30px 'Roboto', sans-serif;text-shadow:0 0 4px #000,0 0 14px #000}
-.tpl-slideHome .sta-slideHome_supTitle,
-.tpl-slideHome.sta-destinos .sta-slideHome_title{font-size:18px}
-.tpl-slideHome.sta-destinos .sta-slideHome_supTitle{font-size:22px}
-.tpl-slideHome .sta-slideHome_subTitle{font:14px 'Roboto', sans-serif;text-transform:uppercase;margin-top:4px;text-shadow:0 0 7px #000, 0 0 14px #000}
-.tpl-slideHome .sta-slideHome_subTitle2{font:300 18px 'Roboto', sans-serif;letter-spacing:.1em;text-transform:uppercase;margin-bottom:90px;text-shadow:0 0 7px #000,0 0 14px #000}
-.tpl-slideHome .sta-slideHome_subTitle2[data-text=""]{display: none}
-.tpl-slideHome.sta-destinos .sta-slideHome_subTitle{font-size:24px;text-transform:none}
-.tpl-slideHome .fn-contarHoteles .sta-loading{display:none}
-.tpl-slideHome .sta-slideHome_title:empty,
-.tpl-slideHome .sta-slideHome_subTitle:empty{display:none}
-.tpl-slideHome .sta-slideHome_buttonPromo{margin-top:28px}
-.tpl-slideHome .sta-slideHome_buttonPromo .button{background:#000;text-transform:uppercase;font-weight:600;font-size:11px;border:2px solid #000;color:#fff;text-decoration:none;display:inline-block;padding:8px 15px;min-width:80px;transition:.3s}
-.tpl-slideHome .sta-slideHome_engine{width:100%;pointer-events:all}
-.tpl-slideHome.sta-destaMvl_1 .sta-slideHome_tableCell{padding-top:80px}
-.tpl-slideHome.sta-destaMvl_2 .sta-slideHome_tableCell{padding-top:230px}
-.tpl-slideHome.sta-destaMvl_3 .sta-slideHome_tableCell{padding-bottom:20px;vertical-align:bottom}
-.tpl-slideHome.sta-onlySlide .sta-slideHome_slideButtons,
-.tpl-slideHome[data-promoButton="false"] .sta-slideHome_buttonPromo,
-.tpl-slideHome[data-promoButton=""] .sta-slideHome_buttonPromo{display:none}
-
-@media(min-width:601px){
-  
-  .tpl-slideHome .sta-slideHome_supTitle,
-  .tpl-slideHome.sta-destinos .sta-slideHome_title{font-size:20px}
-  /* .tpl-slideHome{height:calc(100vh - 292px)} */
-  .tpl-slideHome.sta-destinos{height:450px}
-  .tpl-slideHome .sta-slideHome_title{font-size:45px}
-  .tpl-slideHome .sta-slideHome_subTitle{font-size:16px}
-}
-@media(min-width:801px){
-  /* .tpl-slideHome{min-height:600px} */
-  /* .tpl-slideHome .sta-slideHome_background{z-index:auto} */
-  .tpl-slideHome{margin-top: 100px;}
-  .tpl-slideHome.js-displayNone{display: block;}
-  .tpl-slideHome .sta-slideHome_tableCell{padding-bottom: 90px}
-  .tpl-slideHome .sta-slideHome_slideButtons{position:static}
-  .tpl-slideHome .sta-slideHome_slideRight,
-  .tpl-slideHome .sta-slideHome_slideLeft{position:absolute;border-radius:0;z-index:4;left:-40px;top:50%;height:100px;width:40px;background:rgba(0,0,0,.5);margin-top:-50px;font:30px Icons;color:#fff;text-align: center;transition:left 1s, opacity 1s, background .5s}
-  .tpl-slideHome .sta-slideHome_slideRight{left:auto;right:-40px;transition:right 1s, opacity 1s, background .5s;margin-left:0}
-  .tpl-slideHome .sta-slideHome_slideLeft:hover,
-  .tpl-slideHome .sta-slideHome_slideRight:hover{background:#000;}
-  .tpl-slideHome .sta-slideHome_slideLeft:hover:after,
-  .tpl-slideHome .sta-slideHome_slideRight:hover:after{color: #00A79B}
-  .tpl-slideHome:hover .sta-slideHome_slideRight{right:0}
-  .tpl-slideHome:hover .sta-slideHome_slideLeft{left:0}
-  /* .tpl-slideHome .sta-slideHome_slideLeft:after,
-  .tpl-slideHome .sta-slideHome_slideRight:after{margin-top: 50px;} */
-  .tpl-slideHome .sta-slideHome_titlesContainer{margin: 0 35px}
-  .tpl-slideHome .sta-slideHome_title{font-size:60px}
-  .tpl-slideHome .sta-slideHome_subTitle{font-size:25px;margin-bottom:10px}
-  .tpl-slideHome.sta-destinos .sta-slideHome_subTitle{font-size:48px}
-  .tpl-slideHome .sta-slideHome_buttonPromo{margin-top:58px}
-  .tpl-slideHome .sta-slideHome_buttonPromo .button:focus,
-  .tpl-slideHome .sta-slideHome_buttonPromo .button:hover{background:#fff;border-color: #000;color:#000}
-  .tpl-slideHome .sta-slideHome_buttonPromo .button{padding:15px 25px;font-size:16px}
-  .tpl-slideHome .sta-slideHome_engine{padding: 0;margin-top: -140px}
-}
-@media(min-width:951px){
-  .tpl-slideHome.sta-destaDesk_3 .sta-slideHome_tableCell{padding-top:150px}
-}
-@media(min-width:1401px){
-  .tpl-slideHome.sta-destaDesk_3 .sta-slideHome_tableCell{padding-top:0}
-}
-/* FIN tpl-slideHome */
-  
   
 </style>
 
@@ -698,6 +584,7 @@
 
   <div html="MENU/tpl-columnText.html" class="tpl-columnText scroll_114742">
   <div class="sta-columnText_max">
+
     <div tag-title="_MENU_XT_TITULO" class="sta-columnText_title">Comprometidos con la <span class="title">Industria de la Felicidad</span></div>
 
     <article>
@@ -715,12 +602,11 @@
   </div>
 </div>
 
-  <div html="MENU/tpl-cabeText.html" class="tpl-cabeText fn-readMore scroll_114745" data-dedo="950">
-  <div>
-    <div class="sta-cabeText_textMax ">
+<div html="MENU/tpl-cabeText.html" class="tpl-cabeText fn-readMore scroll_114745" data-dedo="950">
+  <div class="sta-cabeText_textMax ">
       <article>
         <div class="sta-cabeText_subTitle" tag="_MENU_XT_PRETITULO"></div>
-        <header tag="_MENU_XT_TITULO">Carta del presidente</header>
+        <header tag="_MENU_XT_TITULO">Carta del <span style="font-family:var(--spectra);font-size:30px;color:#00A79B">presidente</span></header>
         <section tag="_MENU_XA_DESCRIPCION" class="fn-readMore_content">
            <strong>Grupo Hotusa</strong> es una organización comprometida y
             responsable. Por ello, más
@@ -743,19 +629,26 @@
         </section>
         <div class="sta-cabeText_button fn-readMore_bShort">Leer más</div>
         <div class="sta-cabeText_button fn-readMore_bLong">Leer menos</div>
-        <div class="sta-cabeText_firma">
-           <b>Amancio López Seijas</b><br> Presidente de Grupo Hotusa
-        </div>
+
       </article>
 
-    </div>
-    <div class="sta-cabeText_back" tag-bck="_MENU_XF_FOTO_PRINCIPAL" data-bck="https://images.booking-channel.com/CLIENTES/www.impulsagrupohotusa.com/images/home/Carta/1500/presidente.jpg">
-      <div class="fn-video" tag-v_youtube="_MENU_XT_VIDEO_YOUTUBE" data-video_youtube=""
-        tag-v_wistia="_MENU_XT_VIDEO_WISTIA" data-video_wistia=""></div>
+  </div>
+  <div class="sta-cabeText_back" tag-bck="_MENU_XF_FOTO_PRINCIPAL" data-bck="imgs/fotoAmancio.png">
+    <div class="sta-cabeText_firma">
+      <span style="font-family:var(--spectra);font-size: 14px;">Amancio López Seijas</span><br> Presidente de Grupo Hotusa
     </div>
   </div>
 </div>
-  <div html="MENU/tpl-liServices.html" class="tpl-liServices scroll_114746  navegacion">
+
+<div class="tpl-photosHover-sgh">
+  <div class="sta-photosHover-sgh_max">
+    <div class="sta-photosHover-sgh_title">Nuestra visión</div>
+    <div class="sta-photosHover-sgh_text">La estrategia de sostenibilidad de Grupo Hotusa se articula en base a tres pilares</div>
+    <div class="sta-photosHover-sgh_module"></div>
+  </div>
+</div>
+
+<div html="MENU/tpl-liServices.html" class="tpl-liServices scroll_114746  navegacion">
   <div class="sta-liServices_intro">
     <div tag="_MENU_HIJO_XT_TITULO">Ámbitos de actuación</div>
     <div tag="_MENU_HIJO_XT_SUBTITULO">Un modelo de gestión sostenible</div>
@@ -1243,7 +1136,8 @@ La hoja de ruta incluye la reducción del consumo de energía y agua, las emisio
 
   </ul>
 </div>
-  <div html="MENU/tpl-liServices.html" class="tpl-liServices scroll_114746" >
+
+<div html="MENU/tpl-liServices.html" class="tpl-liServices scroll_114746" >
 
   <div class="sta-liServices_loop scrollnavegacion_114747">
     <div class="sta-liServices_back" data-img="https://images.booking-channel.com/CLIENTES/www.impulsagrupohotusa.com/images/home/Ambitos/1500/compromisp.jpg">
