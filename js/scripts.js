@@ -784,137 +784,105 @@ var servlet = (function (o, $, h) {
   });
 })(document.querySelector('.tpl-logos-gh'), jQuery, hotusa());
 
-(function (o, $, h) {
-  if (!o || !$ || !h) return false;
 
-  var navCenter = function () {
-    $o.removeClass('sta-center');
-    var ancho = 0;
-    for (var i = 0; i < lis.length; i++) {
-      (function ($li) {
-        ancho += $li.width();
-      })($(lis[i]));
-    };
-    if (ancho < $navHeader.width()) $o.addClass('sta-center');
-  },
-    callback = function () {
-      $(navHeader).slick({
-        infinite: false,
-        variableWidth: true,
-        mobileFirst: true,
-        slidesToShow: 1,
-        responsive: [
-          {
-            breakpoint: 400,
-            settings: {
-              slidesToShow: 2
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 700,
-            settings: {
-              slidesToShow: 4
-            }
-          },
-          {
-            breakpoint: 801,
-            settings: {
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 850,
-            settings: {
-              slidesToShow: 4
-            }
-          },
-          {
-            breakpoint: 880,
-            settings: {
-              slidesToShow: 5
-            }
-          },
-          {
-            breakpoint: 1070,
-            settings: {
-              slidesToShow: 6,
-              arrows: false
-            }
-          }
-        ]
-      });
+(function (o, h) {
+  if (!o || !h) return false;
 
-      $(navSection).slick({
-        arrows: false,
-        infinite: false,
-        fade: true,
-        speed: 1000,
-        swipe: false,
-        adaptiveHeight: true,
-        cssEase: 'linear'
-      });
+  var callback = function () {
 
-      cargaImg(navSection.querySelector('.slick-active'));
-      $(navSection).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        cargaImg(slick.$slides[nextSlide]);
-      });
+    var swiperSup = new Swiper(navHeader, {
+      speed: 1000,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      freeMode: true,
+      slidesPerView: 1,
+      breakpoints: {
+        1101 : {
+          centeredSlides: false,
+          slidesPerView: 3
+        }
+      },
+      on: {
+        init: function () {
+          navHeader.querySelector('li').classList.add('sta-active');
+        },
+        click : function (swiper, event) {
+          var li = event.target.closest('li'),
+          siblings = Array.from(li.parentElement.children),
+          n = siblings.indexOf(li);
+          
+          if( swiperInf.realIndex == n ) return false;
 
-      navCenter();
-      $(window).resize(navCenter);
-    },
-    cargaImg = function (li) {
-      var $bck = $(li.querySelector('.sta-slideGrupos-eh_bck')),
-        src = $bck.data('bck');
-      if (src) {
-        $bck
-          .css('background-image', "url('" + src + "')")
-          .append($('<img />', { src: src, class: 'imgOculta', alt: li.querySelector('header').innerText }))
-          .data('bck', '');
+          swiperInf.slideTo(n);
+          
+          var remove = navHeader.querySelector('.sta-active');
+          if( remove ) remove.classList.remove('sta-active');
+          li.classList.add('sta-active');
+        },
+        slideChange: function (swiper) { 
+          var activeIndex = swiper.activeIndex;
+          swiperInf.slideTo(activeIndex);
+        }
       }
-    },
-    $o = $(o),
-    navHeader = o.querySelector('.sta-slideGrupos-eh_headerNav'),
-    $navHeader = $(o.querySelector('.sta-slideGrupos-eh_headerNav')),
-    lis = navHeader.children,
-    navSection = o.querySelector('.sta-slideGrupos-eh_sectionNav'),
-    articles = navSection.children;
+    });
 
-  for (var i = 0; i < lis.length; i++) {
-    (function (li) {
-      var $li = $(li),
-        posi = $li.index();
+    var swiperInf = new Swiper(navSection, {
+      speed: 1000,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      },
+      navigation: false,
+      autoHeight: true,
+      lazyLoading: true,
+      lazy: true,
+      on: {
+        slideChange: function (swiper, ) {
+          var activeIndex = swiper.activeIndex,
+          remove = navHeader.querySelector('.sta-active'),
+          siblings = Array.from(remove.parentElement.children);
 
-      if (posi == 0) $li.addClass('sta-active');
+          if( remove ) remove.classList.remove('sta-active'); 
+          
+          siblings[activeIndex].classList.add('sta-active');
 
-      $li.click(function () {
-        var $t = $(this);
-        if ($t.hasClass('sta-active')) return false;
+          swiperSup.slideTo(activeIndex);
+ 
+        }
+      }
+    });
 
-        $t.addClass('sta-active')
-        $(this).siblings('.sta-active').removeClass('sta-active');
-        $(navSection).slick('slickGoTo', posi)
-      });
+    console.log(1)
 
-    })(lis[i]);
-  };
-
-  for (var i = 0; i < articles.length; i++) {
-    (function (art) {
-      h.enlace_blank($(art.querySelector('.sta-slideGrupos-eh_anchor')));
-    })(articles[i]);
-  }
-
+  },
+  navHeader = o.querySelector('article header .sta-slideGrupos_slide'),
+  navSection = o.querySelector('.sta-slideGrupos_sectionNav');
+ 
   h.cargaScrollAuto({ obj: o }, function () {
-    h.cargarFicheroJS('/js/libraries/slick/slick.min.js', callback)
-  });
+    var load = 2,
+    fn = function () {
+      load--;
+      if (!load) {
+        callback();
+      }
+    }
 
-})(document.querySelector('.tpl-slideGrupos-eh'), window.jQuery, window.hotusa && hotusa());
+    h.cargarFicheroCSS('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', fn)
+ 
+    h.cargarFicheroJS('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', fn);
+
+  });
+    var img = o.querySelectorAll('.sta-slideGrupos_bck'), 
+  ev = function(d){
+    h.cargaScrollAuto({obj:o, dual:true}, function(){
+      d.style.backgroundImage = "url('" + d.dataset.background+ "')";
+    })
+  }
+  for (var i = 0; i < img.length; i++) ev(img[i]);
+
+})(document.querySelector('.tpl-slideGrupos'), window.hotusa && hotusa());
 
 var openModal = (function (o, btns, $) {
   if (!o || !$) return false;
@@ -2687,22 +2655,22 @@ var openModalMultiVideos = (function (o, btns, $, h) {
   var ev = function (o) {
     cargaScrollAuto(o);
     
-    var lis = o.querySelectorAll('.sta-liServices_element');
-    var hiddens = o.parentElement.querySelectorAll('.tpl-slideHome, .tpl-columnText, .tpl-cabeText, .sta-liServices_intro ,.sta-liServices_hr');
-    var menuInput = document.querySelector('#sta-header-gh_nav');
+    // var lis = o.querySelectorAll('.sta-liServices_element');
+    // var hiddens = o.parentElement.querySelectorAll('.tpl-slideHome, .tpl-columnText, .tpl-cabeText, .sta-liServices_intro ,.sta-liServices_hr');
+    // var menuInput = document.querySelector('#sta-header-gh_nav');
     
-    lis.forEach(function(li) {
-      var seeMore = li.querySelector('.sta-liServices_seeMore');
-      var seeLess = li.querySelector('.sta-liServices_seeLess');
+    // lis.forEach(function(li) {
+    //   var seeMore = li.querySelector('.sta-liServices_seeMore');
+    //   var seeLess = li.querySelector('.sta-liServices_seeLess');
       
-      seeMore.addEventListener('click', handleSeeMore(li, lis, hiddens, o));
-      seeLess.addEventListener('click', handleSeeLess(li, lis, hiddens, o));
-      menuInput.addEventListener('click', handleMenuInput(li, lis, hiddens, o, menuInput));
-    });
+    //   seeMore.addEventListener('click', handleSeeMore(li, lis, hiddens, o));
+    //   seeLess.addEventListener('click', handleSeeLess(li, lis, hiddens, o));
+    //   menuInput.addEventListener('click', handleMenuInput(li, lis, hiddens, o, menuInput));
+    // });
     
-    if(window.innerWidth > 820){
-      ul.classList.add('v2');
-    }
+    // if(window.innerWidth > 820){
+    //   ul.classList.add('v2');
+    // }
   };
   
   a.forEach(ev);
@@ -2763,3 +2731,5 @@ var openModalMultiVideos = (function (o, btns, $, h) {
   }
 
 })(document.querySelector('.tpl-liServices.navegacion'), window.hotusa && hotusa());
+
+

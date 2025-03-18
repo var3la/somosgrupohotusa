@@ -25,7 +25,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/CLIENTES/www.somosgrupohotusa.com/images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/CLIENTES/www.somosgrupohotusa.com/images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/CLIENTES/www.somosgrupohotusa.com/images/favicons/favicon-16x16.png">
-  <link rel="manifest" href="https://www.somosgrupohotusa.com/CLIENTES/www.somosgrupohotusa.com/images/favicons/site.webmanifest">
+  <!-- <link rel="manifest" href="https://www.somosgrupohotusa.com/CLIENTES/www.somosgrupohotusa.com/images/favicons/site.webmanifest"> -->
   <link rel="mask-icon" href="/CLIENTES/www.somosgrupohotusa.com/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
@@ -33,12 +33,21 @@
   <link rel="canonical" href="https://www.somosgrupohotusa.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- CSS Critical -->
   <style>
   *{-moz-box-sizing:content-box;-ms-box-sizing:content-box;-o-box-sizing:content-box;-webkit-box-sizing:content-box;border:0;box-sizing:content-box;color:inherit;margin:0;padding:0}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font:12px 'Roboto',sans-serif;height:auto}body{cursor:default;font:12px 'Roboto',sans-serif;margin:0;width:100%}a{color:#0d2831;-moz-text-size-adjust:none;-ms-text-size-adjust:none;-webkit-text-size-adjust:none;background-color:transparent;text-decoration:none}a:hover{text-decoration:underline}address{font-style:normal}b,strong{font-weight:500}button,input,mark{background:none}button,label{cursor:pointer}li{list-style:none}img{border:0}button{overflow:visible;box-sizing:border-box;cursor:pointer;font-family:inherit;font-size:inherit;outline:0;text-align:center;background:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button,label{cursor:pointer}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}textarea{overflow:auto}:focus{outline:none}::-moz-focus-inner{border:0}main{padding-top:0!important;padding:0;position:relative;width:100%}mark{background:none}
-  /* fuente */
-  :root{--spectra:"Spectral", serif}
+  /* fuente y color sgh*/
+  :root{
+    --spectra:"Spectral", serif;
+    --montserrat:"Montserrat", sans-serif;
+    --roboto:"Roboto", sans-serif;
+    --sgh-color:#00A79B;
+    --sgh-color2:#162D60;
+    --text-color:#6F7070
+}
+  
+
   .imgOculta{opacity:0;visibility:hidden;position:absolute;left:0;top:0;width:1px;height:1px}
   h1,h2,h3,h4,h5,h6{display:inline;font:inherit;margin:0;padding:0}
   .sta-inputFixed{position:fixed;left:-999px;top:0;opacity:0;height:0;width:0}
@@ -79,7 +88,7 @@
   .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_fixed .sta-header-gh_lateral{opacity:1;transform:none}
   .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_hambur .sta-header-gh_hamburIcon span:after{top:0;-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);transition:top .5s,transform .5s .5s}
   .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_hambur .sta-header-gh_hamburIcon span:before{top:0;-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);transition:top .5s,transform .5s .5s}
-  .tpl-header-gh .sta-header-gh_abs{position:absolute;left:0;top:0;right:0;padding:23px 30px 23px 40px;transition:background .3s;background:#fff; box-shadow: 0 -5px 10px 6px #162D60;}
+  .tpl-header-gh .sta-header-gh_abs{position:absolute;left:0;top:0;right:0;padding:23px 30px 23px 40px;transition:background .3s;background:#fff;border-bottom:1px solid #00A79B;}
   .tpl-header-gh .sta-header-gh_abs:before{content:'';position:absolute;left:0;bottom:0;right:0;/*box-shadow:0 -5px 10px 6px #162D60;*/z-index:-1}
   .tpl-header-gh .sta-header-gh_max{position:relative}
   .tpl-header-gh .sta-header-gh_table{display:table;width:100%}
@@ -354,7 +363,7 @@
 
   <!-- fin CSS Critical -->
   
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 
@@ -398,7 +407,7 @@
     <div class="cookie-cont-publi">Ayudan a recopilar los hábitos de navegación del usuario para crear un perfil de sus intereses y para mostrarle anuncios adaptados a los mismos.</div>
     <div class="cookie-confirm-all">Aceptar todo</div>
     <div class="cookie-confirm-select">Confirmar selección</div>
-   </div>
+  </div>
   <script>
       window.g_cookies_content = {
         logo: document.querySelector('.logo').innerHTML,
@@ -439,7 +448,7 @@
         script.src = 'https://www.grupohotusa.com/ja/globalCookies/controlCookiesVanilla.js';
         document.body.appendChild(script);
       }
-    </script>
+  </script>
 
 <header>
   <div class="tpl-topHeader-gh">
@@ -581,8 +590,588 @@
 </header>
 
 <main>
+<!--hijo 1-->
+<div class="tpl-slideGrupos">
+  <div class="sta-slideGrupos_max">
+    <div class="sta-slideGrupos_title">
+      Formación y empleabilidad
+    </div>
+    <div class="sta-slideGrupos_subTitle">
+      Grupo Hotusa impulsa la retención y el desarrollo profesional mediante un plan estratégico que armoniza las metas y las aspiraciones individuales. Este enfoque refuerza la conexión entre el crecimiento personal y los objetivos de la empresa, fomentando un equipo comprometido y alineado con sus valores.
+    </div>
+    <article>
+      <header class="sta-slideGrupos_header">
+        <div class="sta-slideGrupos_slide">
+          <div class="swiper-button-next swiper-arrow"></div>
+          <div class="swiper-button-prev swiper-arrow"></div>
+          <ul class="sta-slideGrupos_headerNav swiper-wrapper">
+            <!-- BEGIN menu_row -->
+            <li class="form swiper-slide">
+              <button>FORMACIÓN INTERNA</button>
+            </li>
 
-<div html="MENU/tpl-textLateral-gh.html" class="tpl-textLateral-gh" tag="_MENU_XT_TITULO">BIENVENIDO A SOMOS GRUPO HOTUSA</div>
+            <li class="dual swiper-slide">
+              <button>FORMACIÓN DUAL</button>
+            </li>
+
+            <li class="uni swiper-slide">
+              <button>COLABORACIÓN UNIVERSITARIOS</button>
+            </li>
+            <!-- END menu_row -->
+          </ul>
+        </div>
+      </header>
+      <section class="sta-slideGrupos_sectionNav">
+        <div class="swiper-wrapper">
+        <!-- BEGIN menu_row -->
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <section>
+              <div class="sta-slideGrupos_elems_title">Programa de formación interna</div>              
+              Invertir en formación no solo asegura el cumplimiento de los estándares de calidad establecidos por el grupo, sino que también mejora la experiencia y el servicio que reciben nuestros clientes. Además, desempeña un papel fundamental en garantizar un cumplimiento de las normativas internas y externas, contribuyendo a la excelencia operativa.
+            </section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Proyecto Creciendo juntos</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Proyecto</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+              <div class="sta-slideGrupos_bckCont">
+                <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/2.png"></div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+
+            <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius totam exercitationem, nihil ullam officia tenetur dignissimos aspernatur ut officiis minima illo possimus deleniti nobis accusamus nemo tempore error. Reiciendis, repellendus voluptatibus fuga possimus facilis debitis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>lorem</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+              <div class="sta-slideGrupos_bckCont">
+                <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/3.png"></div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+
+            <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi culpa, necessitatibus, iure ipsa eum ipsum distinctio nulla corrupti, esse aliquam neque? Vel voluptatibus quaerat provident, assumenda rem veritatis velit, ipsa totam voluptates nemo, consequuntur nesciunt. Eum quas doloremque iste sequi in! Iure rem nulla soluta repellat, minima eos reprehenderit quod autem voluptatem fuga, est perferendis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Lorem, ipsum.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+              <div class="sta-slideGrupos_bckCont">
+                <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/4.png"></div>
+              </div>
+            </footer>
+          </article> 
+
+          <!-- END menu_row -->
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+<!--hijo 2-->
+<div class="tpl-slide-sgh">
+  <div class="sta-slide-sgh_max">
+    <div class="sta-slide-sgh_title">Cohesión territorial</div>
+    <div class="sta-slide-sgh_text">En Grupo Hotusa, entendemos que la cohesión territorial es clave para el desarrollo sostenible de los territorios. A través de nuestras actividades empresariales, buscamos fortalecer el tejido social y económico de las localidades en las que tenemos presencia, contribuyendo activamente a su dinamización y bienestar​.</div>
+
+    <div class="sta-slide-sgh_content swiper">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>CENTROS DE TRABAJO</div>
+            </div>
+          </div>
+          <div class="swiper_img"><img data-src="imgs/8.png" alt=""></div>
+          <div class="swiper_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error voluptate, repellendus, aspernatur sed non mollitia temporibus vero est odit numquam enim consequuntur similique ipsum nam dicta necessitatibus inventore id optio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure aperiam perferendis saepe voluptates magni blanditiis eaque magnam dolorum deleniti, est suscipit fugiat illum repudiandae eum? Expedita culpa quo accusamus nisi?</div>
+          <div class="swiper_activities">Actividades en curso</div>
+          <div class="swiper_activities_desc">
+            <ul>
+              <li>Proyecto Creciendo juntos</li>
+              <li><a href="" class="ver_video">Ver video</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>EVENTOS DEPORTIVOS</div>
+            </div>
+          </div>
+          <div class="swiper_img"><img data-src="imgs/3.png" alt=""></div>
+          <div class="swiper_text">Grupo Hotusa refuerza su vínculo con los destinos donde opera mediante eventos deportivos que tienen lugar a lo largo del año y que promueven un estilo de vida saludable e integran a la comunidad local. Un ejemplo destacado son las carreras verticales en el Eurostars Madrid Tower y el Eurostars Torre Sevilla, que cada año reúnen a numerosos participantes, creando un punto de encuentro entre la población local y el hotel.</div>
+          <div class="swiper_activities">Actividades en curso</div>
+          <div class="swiper_activities_desc"></div>
+
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>PAZO RECIMIL</div>
+            </div>
+          </div>
+          <div class="swiper_img"><img data-src="imgs/7.png" alt=""></div>
+          <div class="swiper_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a facere quod? Repellat facere quos ducimus fugiat animi, odit repellendus, labore dignissimos doloribus nulla amet cupiditate id, voluptatibus consequuntur eaque.</div>
+          <div class="swiper_activities">Actividades en curso</div>
+          <div class="swiper_activities_desc"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+<!--hijo 3-->
+<div class="tpl-slide-sgh">
+  <div class="sta-slide-sgh_max">
+    <div class="sta-slide-sgh_title">Compromiso con la cultura</div>
+    <div class="sta-slide-sgh_text">Grupo Hotusa, a través de Eurostars Hotel Company, se ha consolidado como un referente en el ámbito de las iniciativas culturales. Estos esfuerzos no solo promueven la creatividad, sino que también enriquecen a la sociedad mediante el fomento de la cultura. El proyecto cultural de la cadena ha ganado reconocimiento a nivel nacional, consolidándose en la escena cultural y artística y posicionándose como una plataforma de apoyo e impulso para artistas noveles.</div>
+
+    <div class="sta-slide-sgh_content swiper">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>ARTE</div>
+            </div>
+          </div>
+          <div class="swiper_img"><img data-src="imgs/4.png" alt=""></div>
+          <div class="swiper_text">Desde 2005, el proyecto Eurostars Exposiciones ha convertido nuestros hoteles en auténticos espacios de arte, ofreciendo una plataforma destacada para la difusión del panorama artístico contemporáneo. Actualmente, los hoteles de la cadena albergan exposiciones temporales, con un total acumulado de 600 nuestras realizadas en más de 50 establecimientos. Grupo Hotusa también posee La Colección La Toja, una valiosa colección de obras de reconocidos artistas contemporáneos, mayormente de la segunda mitad del siglo XXI, que abarca diversas corrientes artísticas. Esta colección incluye tanto pieza pictóricas en diversas técnicas como esculturas, y se expone en una galería propia ubicada en el Eurostars Suites Mirasierra 5* de Madrid.</div>
+          <div class="swiper_activities">Actividades en curso</div>
+          <div class="swiper_activities_desc">
+            <ul>
+              <li>Proyecto Creciendo juntos</li>
+              <li><a href="" class="ver_video">Ver video</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>LITERATURA</div>
+            </div>
+          </div>
+          <div class="swiper_img"><img data-src="imgs/8.png" alt=""></div>
+          <div class="swiper_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, neque accusantium voluptatem necessitatibus, reiciendis perspiciatis aperiam repudiandae quibusdam minima maiores autem cupiditate quia nemo suscipit et praesentium earum repellendus? Magni ipsum sed iusto adipisci harum ut quos voluptas est dolorem voluptatibus? Atque porro vitae non quas minus deserunt consequatur perferendis.</div>
+          <div class="swiper_activities">Actividades en curso</div>
+          <div class="swiper_activities_desc"></div>
+
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>PREMIOS TALENTO</div>
+            </div>
+          </div>
+          <div class="swiper_img"><img data-src="imgs/6.png" alt=""></div>
+          <div class="swiper_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas dolorum nostrum repellendus quo. Possimus perspiciatis, sunt porro quis, asperiores, laboriosam nulla ut odio id beatae natus? Repudiandae aliquid minus possimus, corrupti, error consectetur tenetur vero distinctio debitis alias reprehenderit dolore, maxime quae. Iusto sit eaque deserunt reprehenderit ut repudiandae et dignissimos totam itaque officiis? Similique quidem tempore illum quia vel quas, iure repellendus consectetur est esse consequatur temporibus asperiores molestiae hic incidunt eum id animi sit perferendis aperiam cumque. Corrupti, dicta. Autem minima asperiores magni velit voluptatem officiis, deserunt aliquam officia sint tempore eaque cupiditate totam delectus culpa nesciunt.</div>
+          <div class="swiper_activities">Actividades en curso</div>
+          <div class="swiper_activities_desc"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+<!--hijo 4(clase extra es diferente)-->
+<div class="tpl-slide-sgh min">
+  <div class="sta-slide-sgh_max">
+    <div class="sta-slide-sgh_title">Grupo Hotusa en 3 minutos</div>
+    <div class="sta-slide-sgh_text">Conoce a través de las palabras del presidente de la compañía Amancio López la visión de Grupo Hotusa en los distintos ámbitos de actividad.</div>
+
+    <div class="sta-slide-sgh_content swiper">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      
+      <div class="swiper-wrapper">
+        <!--nieto 1-->
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>FORMACION</div>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--nieto 2-->
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>SOSTENIBILIDAD E INNOVACIÓN</div>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--nieto 3-->
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>TURISMO Y DESARROLLO URBANO</div>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--nieto 4-->
+        <div class="swiper-slide">
+          <div class="swiper_title_max">
+            <div class="swiper_title">
+              <div>PATRIMONIO CULTURAL</div>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+          <div class="swiper_3min">
+            <div class="swiper_3min_max">
+              <div class="swiper_3min_title">Hablamos de…</div>
+              <div class="swiper_3min_text">Formación y desarrollo del capital humano</div>
+              <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                <defs>
+                  <clipPath id="clip-path">
+                    <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                  </clipPath>
+                </defs>
+                <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                  <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                  <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                </g>
+              </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
 </main>
 
   <footer>
@@ -813,6 +1402,8 @@ De acuerdo con los compromisos adquiridos estamos ejecutando un Plan de transici
   </div>
 </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/scripts.js"></script>
+
 </body>
 </html>
