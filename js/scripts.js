@@ -787,7 +787,7 @@ var servlet = (function (o, $, h) {
 
 (function (o, h) {
   if (!o || !h) return false;
-
+  slide = function(s){
   var callback = function () {
 
     var swiperSup = new Swiper(navHeader, {
@@ -801,7 +801,8 @@ var servlet = (function (o, $, h) {
       breakpoints: {
         1101 : {
           centeredSlides: false,
-          slidesPerView: 3
+          centerInsufficientSlides: true,
+          slidesPerView: 4
         }
       },
       on: {
@@ -857,8 +858,8 @@ var servlet = (function (o, $, h) {
     console.log(1)
 
   },
-  navHeader = o.querySelector('article header .sta-slideGrupos_slide'),
-  navSection = o.querySelector('.sta-slideGrupos_sectionNav');
+  navHeader = s.querySelector('article header .sta-slideGrupos_slide'),
+  navSection = s.querySelector('.sta-slideGrupos_sectionNav');
  
   h.cargaScrollAuto({ obj: o }, function () {
     var load = 2,
@@ -874,15 +875,22 @@ var servlet = (function (o, $, h) {
     h.cargarFicheroJS('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', fn);
 
   });
-    var img = o.querySelectorAll('.sta-slideGrupos_bck'), 
+}
+for (var i = 0; i <o.length; i++) slide(o[i]);
+
+o.forEach((module) => {
+  const img = module.querySelectorAll('.sta-slideGrupos_bck'), 
   ev = function(d){
-    h.cargaScrollAuto({obj:o, dual:true}, function(){
-      d.style.backgroundImage = "url('" + d.dataset.background+ "')";
+    h.cargaScrollAuto({obj:module, dual:true}, function(){
+      const imgBack = new Image();
+      imgBack.src = d.dataset.background;
+      d.appendChild(imgBack);
     })
   }
   for (var i = 0; i < img.length; i++) ev(img[i]);
+});
 
-})(document.querySelector('.tpl-slideGrupos'), window.hotusa && hotusa());
+})(document.querySelectorAll('.tpl-slideGrupos'), window.hotusa && hotusa());
 
 var openModal = (function (o, btns, $) {
   if (!o || !$) return false;

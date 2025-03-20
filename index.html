@@ -35,314 +35,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- CSS Critical -->
-  <style>
-  *{-moz-box-sizing:content-box;-ms-box-sizing:content-box;-o-box-sizing:content-box;-webkit-box-sizing:content-box;border:0;box-sizing:content-box;color:inherit;margin:0;padding:0}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font:12px 'Roboto',sans-serif;height:auto}body{cursor:default;font:12px 'Roboto',sans-serif;margin:0;width:100%}a{color:#0d2831;-moz-text-size-adjust:none;-ms-text-size-adjust:none;-webkit-text-size-adjust:none;background-color:transparent;text-decoration:none}a:hover{text-decoration:underline}address{font-style:normal}b,strong{font-weight:500}button,input,mark{background:none}button,label{cursor:pointer}li{list-style:none}img{border:0}button{overflow:visible;box-sizing:border-box;cursor:pointer;font-family:inherit;font-size:inherit;outline:0;text-align:center;background:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button,label{cursor:pointer}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}textarea{overflow:auto}:focus{outline:none}::-moz-focus-inner{border:0}main{padding-top:0!important;padding:0;position:relative;width:100%}mark{background:none}
-  /* fuente */
-  :root{--spectra:"Spectral", serif}
-  .imgOculta{opacity:0;visibility:hidden;position:absolute;left:0;top:0;width:1px;height:1px}
-  h1,h2,h3,h4,h5,h6{display:inline;font:inherit;margin:0;padding:0}
-  .sta-inputFixed{position:fixed;left:-999px;top:0;opacity:0;height:0;width:0}
-  body > section{padding-top:96px;padding-bottom: 65px;}
-  @media(min-width:601px){
-    body > section{padding-top:98px;padding-bottom: 0;}
-  }
-
-  html.sta-noScroll,
-  html.sta-noScroll body,
-  body.sta-noScroll{overflow:hidden}
-
-  /* tpl-topHeader-gh */
-  .tpl-topHeader-gh{background:#12284C;text-align:right;font:13px 'Open sans',sans-serif;color:#fff;padding:7px 0;background:#12284C;text-align:right;font:13px 'Open sans',sans-serif;display:none}
-  .tpl-topHeader-gh .sta-topHeader-gh_max{max-width:1300px;margin:0 auto}
-  .tpl-topHeader-gh .sta-header-ft_abs .sta-header-ft_lang{width:100px}
-  .tpl-topHeader-gh .sta-idiomas{display:inline-block;vertical-align:baseline;text-transform:uppercase;position:relative;padding-left:20px}
-  .tpl-topHeader-gh .sta-idiomas .sta-idioma_larg{display:none}
-  .tpl-topHeader-gh .sta-idiomas .sta-idiomas_act{display:block;padding-right:25px}
-  .tpl-topHeader-gh .sta-idiomas .sta-idiomas_act:after{content:'';width:0;border-left:4px solid transparent;border-top:4px solid #fff;border-right:4px solid transparent;position:absolute;bottom:6px;right:12px}
-  .tpl-topHeader-gh .sta-idiomas .sta-idioma_lista{position:absolute;background:#12284C;top:23px;right:13px;visibility:hidden;opacity:0;overflow:hidden;max-height:0;z-index:251}
-  .tpl-topHeader-gh .sta-idiomas input:checked ~ .sta-idioma_lista{visibility:visible;opacity:1;transition:1s;max-height:550px}
-  .tpl-topHeader-gh .sta-idiomas .sta-idioma_lista a{color:#fff;text-decoration:none;padding:10px 10px;display:block}
-  .tpl-topHeader-gh .sta-idiomas .sta-idioma_lista a[href$="index.php"] {display:none}
-  @media(min-width:601px){
-    .tpl-topHeader-gh{display:block}
-  }
-  /* FIN tpl-topHeader-gh */
-
-
-
-  /* tpl-header-gh */
-  .tpl-header-gh{position:relative;z-index:250;text-align:left}
-  .tpl-header-gh.sta-fixed .sta-header-gh_abs{position:fixed;box-shadow:0 -5px 10px 6px #162D60}
-  .tpl-header-gh.sta-fixed .sta-header-gh_abs:before{content:none}
-  .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_fixed{visibility:visible}
-  .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_fixed .sta-header-gh_fondo{background:#fff}
-  .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_fixed .sta-header-gh_lateral{opacity:1;transform:none}
-  .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_hambur .sta-header-gh_hamburIcon span:after{top:0;-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);transition:top .5s,transform .5s .5s}
-  .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_hambur .sta-header-gh_hamburIcon span:before{top:0;-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);transition:top .5s,transform .5s .5s}
-  .tpl-header-gh .sta-header-gh_abs{position:absolute;left:0;top:0;right:0;padding:23px 30px 23px 40px;transition:background .3s;background:#fff; box-shadow: 0 -5px 10px 6px #162D60;}
-  .tpl-header-gh .sta-header-gh_abs:before{content:'';position:absolute;left:0;bottom:0;right:0;/*box-shadow:0 -5px 10px 6px #162D60;*/z-index:-1}
-  .tpl-header-gh .sta-header-gh_max{position:relative}
-  .tpl-header-gh .sta-header-gh_table{display:table;width:100%}
-  .tpl-header-gh .sta-header-gh_lateral .sta-header-gh_table{text-align:left}
-  .tpl-header-gh .sta-header-gh_lateral .sta-header-gh_table svg{fill:#162D60;height:34px;width:112px;margin:21px 0 0 20px;display:block}
-  .tpl-header-gh .sta-header-gh_cell{display:table-cell;vertical-align:middle}
-  .tpl-header-gh .sta-header-gh_logo a{display:block;pointer-events:visible}
-  .tpl-header-gh .sta-header-gh_logo svg{display:block;height:44px;width:112px;transition:.3s;fill:#162D60}
-  .tpl-header-gh .sta-header-gh_cell.sta-header-gh_ver{width:50px}
-  .tpl-header-gh .sta-header-gh_abs .sta-header-gh_nav,
-  .tpl-header-gh .sta-header-gh_abs .sta-header-gh_lang,
-  .tpl-header-gh .sta-header-gh_hambur .sta-header-gh_hamburText{display:none}
-  .tpl-header-gh .sta-header-gh_hambur{display:block}
-  .tpl-header-gh .sta-header-gh_hambur .sta-header-gh_hamburIcon{display:block;height:50px;width:50px;position:relative}
-  .tpl-header-gh .sta-header-gh_hambur .sta-header-gh_hamburIcon span{position:absolute;left:50%;top:50%;width:30px;height:2px;margin:-1px 0 0 -11px}
-  .tpl-header-gh .sta-header-gh_hambur .sta-header-gh_hamburIcon span:after,
-  .tpl-header-gh .sta-header-gh_hambur .sta-header-gh_hamburIcon span:before{content:'';position:absolute;left:0;top:-4px;right:0;background:#162D60;height:100%;transition:transform .5s,top .5s .5s}
-  .tpl-header-gh .sta-header-gh_hambur .sta-header-gh_hamburIcon span:before{top:4px}
-  .tpl-header-gh .sta-header-gh_fixed{position:fixed;left:0;top:0;right:0;bottom:0;visibility:hidden}
-  .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_fondo{position:absolute;left:0;top:0;right:0;bottom:0;background:transparent;transition:1s}
-  .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_lateral{position:absolute;top:0;right:0;left:0;bottom:0;overflow:auto;opacity:0;padding:10px 10px 50px;transition:1s;transform:scale(.9)}
-  .tpl-header-gh .sta-header-gh_lateralNav{text-align:center;border-bottom:1px solid #162D60;padding-bottom:0}
-  .tpl-header-gh .sta-header-gh_liNav .sta-header-gh_nombreSeccion{color:#162D60;font:14px 'Roboto',sans-serif;letter-spacing:.01em;display:block;padding:15px 40px;text-decoration:none}
-  .tpl-header-gh .sta-header-gh_liNav .sta-header-gh_nombreSeccion span{position:relative;text-transform:uppercase}
-  .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_liNav:not(:last-of-type){border-bottom:1px solid #162D60}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child{position:relative}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav{display:block;overflow:hidden;max-height:0;transition:max-height 1s cubic-bezier(0,1.16,.3,.96);position:relative}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav li a{font:12px 'Roboto',sans-serif;letter-spacing:.05em;color:#162D60;text-decoration:none;display:block;padding:8px 5px}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav li:last-of-type a{margin-bottom:7px}
-  .tpl-header-gh .sta-header-gh_liSubNav{display:none}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child input:checked ~ .sta-header-gh_liSubNav{max-height:999px;transition:max-height 1s cubic-bezier(.95,.18,.95,.38)}
-  .tpl-header-gh .sta-header-gh_liNav .sta-header-gh_labelSeccion{display:none}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_labelSeccion{display:block;position:absolute;top:9px;bottom:0;right:5px;width:32px;height:32px;background:transparent;border:1px solid #162D60;transition:.3s}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_labelSeccion:hover{background:#162D60}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_labelSeccion:after{content:'\e0f8';font:6px/1px Icons;position:absolute;top:50%;right:12px;color:#162D60;transition:transform .3s}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_labelSeccion:hover:after{color:#fff}
-  .tpl-header-gh .sta-header-gh_liNav.sta-child input:checked ~ .sta-header-gh_labelSeccion:after{transform:rotate(180deg);transition:transform .3s}
-  .tpl-header-gh .sta-header-gh_abs .sta-header-gh_fixed .sta-header-gh_lang{display:block}
-  .tpl-header-gh .sta-header-gh_abs .sta-header-gh_max .sta-header-gh_lang{transition:.3s}
-  .tpl-header-gh .sta-header-gh_table2{display:table;width:100%;height:80%;max-width:340px;margin:30px auto 0}
-  .tpl-header-gh .sta-header-gh_cell2{display:table-cell;vertical-align:middle}
-  .tpl-header-gh .sta-idiomas{display:inline-block;position:relative;font:bold 16px 'Roboto',sans-serif;min-width:60px}
-  .tpl-header-gh .sta-header-gh_max .sta-idiomas{color:#162D60;border:solid 1px #162D60}
-  .tpl-header-gh .sta-idiomas .sta-idiomas_act{position:relative;padding:5px 23px 5px 5px;display:block;border:1px solid #162D60;position:relative;transition:background 1s, color 1s}
-  .tpl-header-gh .sta-idiomas .sta-idiomas_act:before{content:'\e004';font:15px/1px Icons;position:absolute;top:50%;right:5px}
-  .tpl-header-gh .sta-idiomas .sta-idioma_larg{display:none}
-  .tpl-header-gh .sta-idiomas .sta-idioma_lista{overflow:hidden;max-height:0;transition:max-height 1s cubic-bezier(0,1.16,.3,.96)}
-  .tpl-header-gh .sta-idiomas input:checked ~ .sta-idioma_lista{max-height:500px;transition:max-height 1s cubic-bezier(.95,.18,.95,.38)}
-  .tpl-header-gh .sta-idiomas .sta-idioma_lista a{display:block;color:#162D60;text-decoration:none ;padding:5px 7px;background:#fff;border:1px solid #fff;border:1px solid #001689;border-top:0}
-  .tpl-header-gh .sta-idiomas input:checked ~ .sta-idiomas_act{background:#162D60;color:#fff}
-  .tpl-header-gh .sta-header-gh_max .sta-idiomas .sta-idioma_lista a{color:#fff;background:#162D60;border:1px solid #162D60}
-  .tpl-header-gh .sta-idiomas input:checked ~ .sta-idioma_lista{max-height:999px;transition:max-height 1s cubic-bezier(.95,.18,.95,.38)}
-  .tpl-header-gh.sta-notIdiomas .sta-header-gh_lang{display:none!important}
-  .tpl-header-gh .sta-header-gh_lang{display:block;margin:30px auto 0 ;text-align:center;color:#162D60;position:relative}
-  .tpl-header-gh .sta-header-gh_logoIdioma{position:absolute;top:0;left:calc(50% - 80px);width:25px}
-  .tpl-header-gh .sta-header-gh_logoIdioma svg{fill:#fff}
-  .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-oculto{display:none}
-  @media(min-width:821px){
-    .tpl-header-gh .sta-header-gh_abs{border-top:none}
-    .tpl-header-gh.sta-noVerMas .sta-header-gh_ver{display:none} 
-    .tpl-header-gh.sta-noVerMas .sta-header-gh_nav .sta-header-gh_contNav{margin:0 auto} 
-    .tpl-header-gh.sta-noVerMas.sta-notIdiomas .sta-header-gh_nav .sta-header-gh_contNav{margin-right:0}
-    .tpl-header-gh.sta-noVerMas .sta-header-gh_max .sta-header-gh_liNav:last-of-type:after{content:none}
-    .tpl-header-gh .sta-header-gh_max .sta-idiomas input:checked ~ .sta-idioma_lista{transition:max-height .5s cubic-bezier(.76,.34,.94,.2)}
-    .tpl-header-gh .sta-header-gh_abs{padding:0 20px 0 40px}
-    .tpl-header-gh .sta-header-gh_abs .sta-header-gh_fixed .sta-header-gh_lang{display:none}
-    .tpl-header-gh .sta-header-gh_logo svg{width:150px;height:74px}
-    .tpl-header-gh.sta-logoFixed svg{fill:transparent;transition:.3s all}
-    .tpl-header-gh.sta-logoFixed.sta-fixed svg{fill:#162D60}
-    .tpl-header-gh .sta-header-gh_cell.sta-header-gh_logo{width:140px}
-    .tpl-header-gh.sta-fixed .sta-header-gh_logo{width:140px;display:table-cell;vertical-align:middle}
-    .tpl-header-gh .sta-header-gh_table{text-align:right}
-    .tpl-header-gh .sta-header-gh_abs .sta-header-gh_nav{display:table-cell;text-align:right}
-    .tpl-header-gh .sta-header-gh_max{max-width:1018px;margin:0 auto}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_nav .sta-header-gh_contNav{display:table;margin-right:0;height:98px;transition:height .3s;margin-left:auto}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav{display:table-cell;vertical-align:middle;position:relative;text-align:center}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav .sta-header-gh_nombreSeccion{position:relative;font:13px 'Roboto',sans-serif;color:#162D60;display:block;padding:10px 15px;}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav .sta-header-gh_nombreSeccion span{position:relative}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav .sta-header-gh_nombreSeccion span:before{content:'';position:absolute;bottom:-8px;height:1px;background-color:#162D60;transition:all .5s;left:50%;right:50%}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav:hover .sta-header-gh_nombreSeccion span:before{left:15px;right:15px;transition:all .5s}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-actual .sta-header-gh_nombreSeccion span:before{content:'';position:absolute;bottom:-8px;left:15px;right:15px;height:1px;background-color:#000}
-    .tpl-header-gh .sta-idioma_lista a{text-align:center}
-    .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_liNav.sta-child .sta-header-gh_nombreSeccion span:after{content:none}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav{position:absolute;top:100%;width:220px;right:18px;overflow:hidden;max-height:0;transition:none;margin-top:-20px;filter:drop-shadow(0 1px 7px rgba(0,0,0,.5))}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav:before{content:'';position:absolute;top:0;right:0;border:6px solid;border-color:transparent #fff #fff transparent}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child:hover .sta-header-gh_liSubNav{max-height:999px;padding-top:12px;transition:max-height .5s cubic-bezier(.76,.34,.94,.2), padding-top .5s ease}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav:after{content:none}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav li{position:relative;background:#fff}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav li:first-of-type{padding-top:7px}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav li:last-of-type{padding-bottom:7px}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_liNav.sta-child .sta-header-gh_liSubNav li a{font:300 13px 'Roboto',sans-serif;color:#000;display:block;padding:7px 15px 7px 5px;text-align:right;letter-spacing:normal}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_ver{width:110px;text-align:center;padding:5px;position:relative}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_ver .sta-header-gh_hambur:after{content:'';position:absolute;top:0;left:0;right:0;bottom:0}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_ver .sta-header-gh_hamburText{display:inline-block;font:13px 'Roboto',sans-serif;color:#00A79B;position:relative;padding-right:15px;text-transform:uppercase}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_ver .sta-header-gh_hamburText:after{transition:transform .3s;content:'\e0f8';font:9px/1px Icons;display:inline-block;position:absolute;top:50%;right:0}
-    .tpl-header-gh input:checked ~ .sta-header-gh_abs .sta-header-gh_max .sta-header-gh_ver .sta-header-gh_hamburText:after{transform:rotate(180deg)}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_lang{display:none;margin:0;width:95px;text-align:right;padding:0}
-    .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_lateral{transform:none;left:auto;width:330px;opacity:1;background:#fff;right:-350px}
-    .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_fixed .sta-header-gh_fondo{background:rgba(0,0,0,.5)}
-    .tpl-header-gh #sta-header-gh_nav:checked ~ .sta-header-gh_abs .sta-header-gh_fixed .sta-header-gh_lateral{right:0}
-    .tpl-header-gh .sta-header-gh_max .sta-header-gh_ver .sta-header-gh_hamburIcon{display:none}
-    .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_logo svg{display:none}
-    .tpl-header-gh .sta-header-gh_max .sta-idiomas .sta-idioma_lista{width:auto}
-    .tpl-header-gh.sta- .sta-header-gh_max .sta-idiomas{width:80px}
-    .tpl-header-gh .sta-header-gh_liNav.sta-child .sta-header-gh_nombreSeccion span:before{right:-13px}
-    .tpl-header-gh .sta-header-gh_table2{max-width:265px;height:auto}
-    .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_cell.sta-header-gh_logo{display:none}
-    .tpl-header-gh .sta-header-gh_fixed .sta-header-gh_hambur .sta-header-gh_hamburIcon{margin-left:auto}
-    .tpl-header-gh .sta-header-gh_lateral .sta-header-fhe_logo{display:none}
-  }
-
-  @media(min-width:1101px){
-    .tpl-header-gh .sta-header-gh_max{max-width: 1018px;}
-  }
-  /* tpl-header-gh */
-/* .tpl-cabeText */
-@keyframes tplCabeText_arrow{
-  0%,100%{margin-top:0}
-  25%{margin-top:10px}
-  75%{margin-top:-10px}
-}
-.tpl-cabeText{font:17px/20px 'Roboto',sans-serif;color:#707070;overflow:hidden;padding-bottom:40px;}
-.tpl-cabeText.v2{color:#fff;font-weight:bold;font-size:18px;position:relative}
-.tpl-cabeText .sta-cabeText_textMax{padding:75px 20px 20px;}
-.tpl-cabeText .sta-cabeText_textMax section{font-size: 14px;overflow: hidden;}
-.tpl-cabeText.v2 .sta-cabeText_textMax{max-width:none;position:relative;z-index:1;padding:85px 35px 60px 30px}
-.tpl-cabeText article{transform:translateX(-300px);opacity:0}
-.tpl-cabeText.v2 article{padding:0 0 20px}
-.tpl-cabeText .sta-cabeText_subTitle{display:none}
-.tpl-cabeText article header{font-size:27px;color:#162D60;margin-bottom:8px; font-weight:300;}
-.tpl-cabeText.v2 article header,
-.tpl-cabeText.v3 article header{color:#fff;padding-top: 30px;}
-.tpl-cabeText .sta-cabeText_goDown{display:none;width:64px;height:64px;background:#2B2B2B}
-.tpl-cabeText .sta-cabeText_goDown:before{content:'\e0f7';font:26px Icons;color:#fff;display:inline-block}
-.tpl-cabeText.v2 .sta-cabeText_goDown{background:#fff;display:block}
-.tpl-cabeText.v2 .sta-cabeText_goDown:before{color:#2B2B2B}
-.tpl-cabeText .sta-cabeText_back{height:400px;background-position:center;background-repeat:no-repeat;background-size:cover;position:relative;overflow:hidden}
-.tpl-cabeText.noButton .sta-cabeText_goDown{display:none}
-.tpl-cabeText.v2 .sta-cabeText_back{position:absolute;top:0;left:0;right:0;height:100%}
-.tpl-cabeText .sta-cabeText_back,
-.tpl-cabeText .sta-cabeText_goDown{transform:translateX(300px);opacity:0}
-.tpl-cabeText.sta-active article,
-.tpl-cabeText.sta-active .sta-cabeText_back,
-.tpl-cabeText.sta-active .sta-cabeText_goDown{transform:none;opacity:1;transition:transform 1s, opacity 1s;}
-.tpl-cabeText.sta-active .sta-cabeText_back{margin:0 auto;width:100%;width:350px;height: 300px;}
-.tpl-cabeText .sta-cabeText_button{display: none;color: #00A79B;font-size: 11px;position: relative;margin: 20px 0 0; text-transform: uppercase;}
-.tpl-cabeText .sta-cabeText_button:after{content:'\e084';padding-left: inherit;font: 18px/1px Icons;padding-left: 10px;vertical-align: middle;transition: margin-top .5s;/* rotate: 90deg; */display: inline-block;margin-top: 0; content: none;}
-.tpl-cabeText .sta-cabeText_button.fn-readMore_bLong:after{rotate: 270deg;margin-top: 0;}
-.tpl-cabeText .sta-cabeText_button.sta-show{display: inline-block;}
-.tpl-cabeText .sta-cabeText_button:hover.fn-readMore_bShort:after{margin-top: 0px;}
-.tpl-cabeText .sta-cabeText_button:hover.fn-readMore_bLong:after{margin-top: -12px;}
-.tpl-cabeText .sta-cabeText_firma{color: #fff;font-size: 10px;padding: 20px 0 0;position: absolute;z-index: 1;bottom: 10px;left: 10px;}
-@media(min-width:821px){
-  .tpl-cabeText.js-displayNone{display: block;}
-  .tpl-cabeText article header{font-size: 30px;}
-  .tpl-cabeText article .fn-readMore_content{column-count: 2;text-wrap: pretty;}
-}
-@media(min-width:901px){
-  .tpl-cabeText{position:relative;display:flex;justify-content:space-between;}
-  .tpl-cabeText > div{display: flex;}
-  .tpl-cabeText .sta-cabeText_textMax{max-width:50%;position:relative;padding-left:20px;}
-  .tpl-cabeText.v2 .sta-cabeText_textMax{padding:0;max-width:900px}
-  .tpl-cabeText article header{margin-bottom:30px;}
-  .tpl-cabeText article{padding:0;display:flex;flex-direction:column;justify-content:center;min-height:500px;box-sizing:border-box}
-  .tpl-cabeText.v2 article{padding:50px 40% 70px 0;justify-content:flex-end}
-  .tpl-cabeText.v3 article{padding-left:0}
-  .tpl-cabeText .sta-cabeText_subTitle{display:none;margin-bottom:57px}
-  .tpl-cabeText .sta-cabeText_subTitle svg{fill:#2B2B2B;height:52px}
-  .tpl-cabeText.v3 header,
-  .tpl-cabeText.v3 section{padding-right:90px}
-  .tpl-cabeText.v2 section{padding-right:70px}
-  .tpl-cabeText .sta-cabeText_goDown{display:block;position:absolute;right:0;bottom:95px;z-index:1}
-  .tpl-cabeText.v3 .sta-cabeText_goDown,
-  .tpl-cabeText.noButton .sta-cabeText_goDown{display:none}
-  .tpl-cabeText .sta-cabeText_goDown:hover:before,
-  .tpl-cabeText .sta-cabeText_goDown:focus:before{animation:tplCabeText_arrow 2s linear infinite}
-  .tpl-cabeText .sta-cabeText_back{position:relative;width:50%;height:auto}
-  .tpl-cabeText.v2 .sta-cabeText_back{left:0;width:100%}
-  .tpl-cabeText.v2 .sta-cabeText_textMax{z-index:1}
-  .tpl-cabeText.sta-active .sta-cabeText_back{width: 550px;height: 587px;margin: 75px 0 0 0;}
-  .tpl-cabeText article .fn-readMore_content{column-count: 1;}}
-@media(min-width: 1101px){
-  .tpl-cabeText{max-width:1283px;margin:0 auto}
-  .tpl-cabeText .sta-cabeText_textMax section{max-width:536px;}
-  
-}
-
-/* FIN .tpl-cabeText */  
-  /* .tpl-cabecera-gh */
-  .tpl-cabecera-gh{background:#fff;font:17px/20px 'Roboto',sans-serif;padding-top:100px;color:#707070;counter-reset:tplCabeceraGh}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide article{padding:30px;max-width:500px}
-  .tpl-cabecera-gh .slick-list{position:relative;overflow:hidden;z-index:1}
-  .tpl-cabecera-gh .slick-slide{min-height:1px;outline:none;display:inline-block;vertical-align:top}
-  .tpl-cabecera-gh .slick-slide{opacity:0;transition:opacity .5s}
-  .tpl-cabecera-gh .slick-slide.slick-active{opacity:1}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide:not(.slick-initialized) > .sta-cabecera-gh_elem:not(:first-child),
-  .tpl-cabecera-gh .sta-cabecera-gh_subTitle{display:none}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide header{margin-bottom:13px}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide header .sta-cabecera-gh_preTitle{text-transform:uppercase;margin-bottom:13px}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide header .sta-cabecera-gh_preTitle:empty{display:none}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide header .sta-cabecera-gh_title{font:50px/51px 'DM Serif Display',serif;color:#000}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer{display:table;width:100%;margin-top:10px}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont{font:80px/105px 'DM Serif Display', serif;color:#707070;display:table-cell;vertical-align:bottom;text-align:left}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador[data-total=''],
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador[data-total='1']{display:none}
-  @supports(-webkit-text-stroke:1px #707070){
-    .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont{color:transparent;-webkit-text-stroke:1px #707070}
-  }
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador{display:inline-block;position:relative}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador[data-total=''],
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador[data-total='1']{display:none}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador:before{counter-increment:tplCabeceraGh;content:counter(tplCabeceraGh)}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador:after{content:"/" attr(data-total)}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont .slick-prev{display:none!important}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont .slick-next{position:absolute;top:50%;left:100%;color:transparent;-webkit-text-stroke:transparent;font-size:1px;font-size:0;width:50px;height:50px;margin:-25px 0 0 20px}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont .slick-next:after{content:'\e084';font:40px Icons;color:#707070}
-  @supports(-webkit-text-stroke:1px #707070){
-    .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont .slick-next:after{color:transparent;-webkit-text-stroke:1px #707070}
-  }
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_enlace{display:table-cell;vertical-align:bottom;text-align:right}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_enlace a{text-decoration:none;color:#162D60;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_enlace a:after{content:'\e103';font:26px Icons;vertical-align:middle;margin-left:20px}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_enlace a[href='']{display:none}
-  .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_enlace a:empty:before{content:attr(text-default)}
-  .tpl-cabecera-gh .sta-cabecera-gh_img{background-position:center;background-repeat:no-repeat;background-size:cover;height:373px;position:relative}
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_abs{position:absolute;left:25px;right:30px;bottom:30px}
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max{display:table;width:100%;max-width:500px}
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_logo{display:table-cell;vertical-align:bottom}
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_logo svg{display:block;width:180px;height:104px;fill:#fff;transition: .3s;}
-  /* .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_btnContent{display:table-cell;vertical-align:bottom;text-align:right} */
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_btnContent{display:table-cell;vertical-align:bottom;text-align:center}
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_btn{margin-bottom:20px;color:#fff;text-transform:uppercase;letter-spacing:1.4px;font-weight:bold;margin-left: 15px;}
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_btn[data-video='']{display:none}
-  .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_btn:after{content:'\e103';font:26px Icons;vertical-align:middle;margin-left:6px}
-  @media(min-width:801px){
-    .tpl-cabecera-gh{padding-right:50%;position:relative}
-    .tpl-cabecera-gh .sta-cabecera-gh_subTitle{display:block;margin-bottom:57px}
-    .tpl-cabecera-gh .sta-cabecera-gh_subTitle svg{fill:#162D60;height:52px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide{max-width:490px;margin:0 0 0 auto}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide article{min-height:604px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:flex-start;padding-right:60px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide header{margin-bottom:25px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide header .sta-cabecera-gh_preTitle{font-size:14px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide header .sta-cabecera-gh_title{line-height:58px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide footer{margin-top:auto;margin-bottom:0}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_enlace{padding-bottom:25px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contador{font-size:103px;line-height:136px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont .slick-next{width:70px;height:70px;margin-top:-35px}
-    .tpl-cabecera-gh .sta-cabecera-gh_slide footer .sta-cabecera-gh_contadorCont .slick-next:after{font-size:55px}
-    .tpl-cabecera-gh .sta-cabecera-gh_img{position:absolute;left:50%;top:0;right:0;bottom:0;height:auto}
-    
-    .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max{max-width:none}
-    
-    .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_btn{margin-bottom:35px}
-  }
-  @media(min-width:916px){
-    .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_abs{left:50px;right:70px;bottom:55px}
-    .tpl-cabecera-gh .sta-cabecera-gh_img .sta-cabecera-gh_max .sta-cabecera-gh_logo svg{width:294px;height:170px;transition: .3s;}
-  }
-  /* FIN .tpl-cabecera-gh */
-  
-</style>
-
-
+<link rel="stylesheet" href="css/critical.css">
   <!-- fin CSS Critical -->
   
 
@@ -488,74 +181,70 @@
 
           <div class="sta-header-gh_cell2">
             <ul class="sta-header-gh_lateralNav">
+<!-- BEGIN menu_row -->
+              <!-- <li class="sta-header-gh_liNav ">
+                <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_">
+                <a class="sta-header-gh_nombreSeccion" href="http://127.0.0.1:5500/index.html">
+                  <span><span class="title-sgh2-header">Home</span>
+                </a>
+                <label for="sta-header-gh_id_" class="sta-header-gh_labelSeccion"></label>
+                <ul class="sta-header-gh_liSubNav"></ul>
+              </li> -->
 
               <li class="sta-header-gh_liNav ">
                 <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_114742">
-                <a class="sta-header-gh_nombreSeccion" href="https://www.somosgrupohotusa.com/?scroll=114742">
-                  <span>NUESTRO COMPROMISO</span>
+                <a class="sta-header-gh_nombreSeccion" href="http://127.0.0.1:5500/index.html?scroll=114742">
+                  <span><span class="title-sgh2-header">Nuestro</span> compromiso</span>
                 </a>
                 <label for="sta-header-gh_id_114742" class="sta-header-gh_labelSeccion"></label>
-                <ul class="sta-header-gh_liSubNav">
-
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114743"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114744"></a>
-                    </li>
-                </ul>
+                <ul class="sta-header-gh_liSubNav"></ul>
               </li>
+
               <li class="sta-header-gh_liNav ">
                 <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_114745">
-                <a class="sta-header-gh_nombreSeccion" href="https://www.somosgrupohotusa.com/?scroll=114745">
-                  <span>CARTA DEL PRESIDENTE</span>
+                <a class="sta-header-gh_nombreSeccion" href="http://127.0.0.1:5500/index.html?scroll=114745">
+                  <span><span class="title-sgh2-header">Carta del </span>presidente</span>
                 </a>
                 <label for="sta-header-gh_id_114745" class="sta-header-gh_labelSeccion"></label>
-                <ul class="sta-header-gh_liSubNav">
-
-                </ul>
+                <ul class="sta-header-gh_liSubNav"></ul>
               </li>
+
+              <li class="sta-header-gh_liNav ">
+                <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_11474534">
+                <a class="sta-header-gh_nombreSeccion" href="http://127.0.0.1:5500/index.html?scroll=11474534">
+                  <span><span class="title-sgh2-header">Nuestra </span>misión</span>
+                </a>
+                <label for="sta-header-gh_id_11474534" class="sta-header-gh_labelSeccion"></label>
+                <ul class="sta-header-gh_liSubNav"></ul>
+              </li>
+
               <li class="sta-header-gh_liNav ">
                 <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_114746">
-                <a class="sta-header-gh_nombreSeccion" href="https://www.somosgrupohotusa.com/?scroll=114746">
-                  <span>ÁMBITOS DE ACTUACIÓN</span>
+                <a class="sta-header-gh_nombreSeccion" href="http://127.0.0.1:5500/index.html?scroll=114746">
+                  <span><span class="title-sgh2-header">Ambitos de </span>actuación</span>
                 </a>
                 <label for="sta-header-gh_id_114746" class="sta-header-gh_labelSeccion"></label>
-                <ul class="sta-header-gh_liSubNav">
-
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114747"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114751"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114752"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114756"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114758"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114761"></a>
-                    </li>
-                    <li>
-                      <a href="https://www.somosgrupohotusa.com/index.php?action=muestra_elemento&idioma=ES&id_elemento=114763"></a>
-                    </li>
-                </ul>
+                <ul class="sta-header-gh_liSubNav"></ul>
               </li>
+
+              <li class="sta-header-gh_liNav ">
+                <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_8">
+                <a class="sta-header-gh_nombreSeccion" href="http://127.0.0.1:5500/index.html?scroll=8">
+                  <span><span class="title-sgh2-header">3 minutos</span>
+                </a>
+                <label for="sta-header-gh_id_8" class="sta-header-gh_labelSeccion"></label>
+                <ul class="sta-header-gh_liSubNav"></ul>
+              </li>
+
               <li class="sta-header-gh_liNav ">
                 <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_114216">
-                <a class="sta-header-gh_nombreSeccion" href="https://www.somosgrupohotusa.com/contacto.html">
+                <a class="sta-header-gh_nombreSeccion" href="http://127.0.0.1:5500/index.htmlcontacto.html">
                   <span>Contacto</span>
                 </a>
                 <label for="sta-header-gh_id_114216" class="sta-header-gh_labelSeccion"></label>
-                <ul class="sta-header-gh_liSubNav">
-
-                </ul>
+                <ul class="sta-header-gh_liSubNav"></ul>
               </li>
+<!-- END menu_row -->
             </ul>
             <div class="sta-header-gh_lang">
               <!-- TAG IDIOMAS --><label class="sta-idiomas">  <input type="checkbox" class="sta-inputFixed">  <span data-idi="ES" class="sta-idiomas_act">    <span class="sta-idioma_larg">ESPAÑOL</span>    <span class="sta-idioma_corto">ES</span>  </span><ul class="sta-idioma_lista"><li>      <a data-idi="EN" href="https://www.somosgrupohotusa.com/EN/">        <span class="sta-idioma_larg">ENGLISH</span>        <span class="sta-idioma_corto">EN</span>      </a>    </li>  </ul></label><!-- FIN TAG IDIOMAS -->
@@ -597,7 +286,7 @@
   <div class="sta-cabeText_textMax ">
       <article>
         <div class="sta-cabeText_subTitle" tag="_MENU_XT_PRETITULO"></div>
-        <header tag="_MENU_XT_TITULO">Carta del <span class="title-sgh">presidente</span></header>
+        <header class="title-sgh2" tag="_MENU_XT_TITULO">Carta del <span class="title-sgh">presidente</span></header>
         <section tag="_MENU_XA_DESCRIPCION" class="fn-readMore_content">
            <strong>Grupo Hotusa</strong> es una organización comprometida y
             responsable. Por ello, más
@@ -631,9 +320,9 @@
   </div>
 </div>
 
-<div class="tpl-photosHover-sgh">
+<div class="tpl-photosHover-sgh scroll_11474534">
   <div class="sta-photosHover-sgh_max">
-    <div class="sta-photosHover-sgh_title">Nuestra <span class="title-sgh">visión</span></div>
+    <div class="sta-photosHover-sgh_title title-sgh2">Nuestra <span class="title-sgh">visión</span></div>
     <div class="sta-photosHover-sgh_text">La estrategia de sostenibilidad de Grupo Hotusa se articula en base a tres pilares</div>
     <div class="sta-photosHover-sgh_text_max">
 
@@ -665,7 +354,7 @@
 <div html="MENU/tpl-liServices.html" class="tpl-liServices scroll_114746  navegacion" data-bck="imgs/molinos.png" style="background: url(imgs/molinos.png);background-repeat: no-repeat;background-size: cover;background-position: center;">
   <div class="sta-liServices_max">
     <div class="sta-liServices_intro">
-      <div tag="_MENU_HIJO_XT_TITULO">Ámbitos de<span class="title-sgh"> actuación</span></div>
+      <div class="title-sgh2" tag="_MENU_HIJO_XT_TITULO">Ámbitos de<span class="title-sgh"> actuación</span></div>
       <div tag="_MENU_HIJO_XT_SUBTITULO"></div>
       <div tag="_MENU_XA_DESCRIPCION_CORTA" class="sta-liServices_desc">
         Grupo Hotusa es una organización orientada a generar valor atendiendo a la realidad
@@ -680,7 +369,7 @@
     </div>
     <ul class="sta-liServices_list">
   
-      <li class="sta-liServices_element" id="scrollnavegacion_114747">
+      <li class="sta-liServices_element" id="scroll_1">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg">
@@ -763,7 +452,7 @@
   
       </li>
   
-      <li class="sta-liServices_element" id="scrollnavegacion_114758">
+      <li class="sta-liServices_element" id="scroll_2">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg">
@@ -812,7 +501,7 @@
   
       </li>
   
-      <li class="sta-liServices_element" id="scrollnavegacion_114751">
+      <li class="sta-liServices_element" id="scroll_3">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg">
@@ -873,7 +562,7 @@
   
       </li>
   
-      <li class="sta-liServices_element" id="scrollnavegacion_114752">
+      <li class="sta-liServices_element" id="scroll_4">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg">
@@ -929,7 +618,7 @@
   
       </li>
   
-      <li class="sta-liServices_element" id="scrollnavegacion_114763">
+      <li class="sta-liServices_element" id="scroll_5">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg">
@@ -977,7 +666,7 @@
   
       </li>
   
-      <li class="sta-liServices_element" id="scrollnavegacion_114756">
+      <li class="sta-liServices_element" id="scroll_6">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg">
@@ -1053,7 +742,7 @@
   
       </li>
   
-      <li class="sta-liServices_element" id="scrollnavegacion_114761">
+      <li class="sta-liServices_element" id="scroll_7">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.157 35">
@@ -1112,7 +801,7 @@
   
       </li>
 
-      <li class="sta-liServices_element" id="scrollnavegacion_114761">
+      <li class="sta-liServices_element" id="scroll_8">
         <article class="sta-liServices_eleText">
           <header>
             <div tag="_MENU_HIJO_XA_SVG" class="sta-liServices_svg"><svg viewBox="0 0 293.99 170.001">
@@ -1178,8 +867,788 @@
     </ul>
   </div>
 </div>
+<!--hijo 1-->
+<div class="tpl-slideGrupos scroll_1" id="scroll_1">
+  <div class="sta-slideGrupos_max">
+    <div class="sta-slideGrupos_title">
+      Formación <span class="title-sgh2">y</span> empleabilidad
+    </div>
+    <div class="sta-slideGrupos_subTitle">
+      Grupo Hotusa impulsa la retención y el desarrollo profesional mediante un plan estratégico que armoniza las metas y las aspiraciones individuales. Este enfoque refuerza la conexión entre el crecimiento personal y los objetivos de la empresa, fomentando un equipo comprometido y alineado con sus valores.
+    </div>
+    <article>
+      <header class="sta-slideGrupos_header">
+        <div class="sta-slideGrupos_slide">
+          <div class="swiper-button-next swiper-arrow"></div>
+          <div class="swiper-button-prev swiper-arrow"></div>
+          <ul class="sta-slideGrupos_headerNav swiper-wrapper">
+            <!-- BEGIN menu_row -->
+            <li class="form swiper-slide">
+              <button>FORMACIÓN INTERNA</button>
+            </li>
 
-<!-- <div html="MENU/tpl-textLateral-gh.html" class="tpl-textLateral-gh" tag="_MENU_XT_TITULO">BIENVENIDO A SOMOS GRUPO HOTUSA</div> -->
+            <li class="dual swiper-slide">
+              <button>FORMACIÓN DUAL</button>
+            </li>
+
+            <li class="uni swiper-slide">
+              <button>COLABORACIÓN UNIVERSITARIOS</button>
+            </li>
+            <li class="form swiper-slide">
+              <button>FORMACIÓN INTERNA</button>
+            </li>
+
+            <li class="dual swiper-slide">
+              <button>FORMACIÓN DUAL</button>
+            </li>
+
+            <li class="uni swiper-slide">
+              <button>COLABORACIÓN UNIVERSITARIOS</button>
+            </li>
+            <!-- END menu_row -->
+          </ul>
+        </div>
+      </header>
+      <section class="sta-slideGrupos_sectionNav">
+        <div class="swiper-wrapper">
+        <!-- BEGIN menu_row -->
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/2.png"></div>
+            </div>
+            <section>
+              <div class="sta-slideGrupos_elems_title">Programa de formación interna</div>              
+              Invertir en formación no solo asegura el cumplimiento de los estándares de calidad establecidos por el grupo, sino que también mejora la experiencia y el servicio que reciben nuestros clientes. Además, desempeña un papel fundamental en garantizar un cumplimiento de las normativas internas y externas, contribuyendo a la excelencia operativa.
+            </section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Proyecto Creciendo juntos</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Proyecto</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/3.png"></div>
+            </div>
+            <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius totam exercitationem, nihil ullam officia tenetur dignissimos aspernatur ut officiis minima illo possimus deleniti nobis accusamus nemo tempore error. Reiciendis, repellendus voluptatibus fuga possimus facilis debitis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>lorem</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/4.png"></div>
+            </div>
+            <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi culpa, necessitatibus, iure ipsa eum ipsum distinctio nulla corrupti, esse aliquam neque? Vel voluptatibus quaerat provident, assumenda rem veritatis velit, ipsa totam voluptates nemo, consequuntur nesciunt. Eum quas doloremque iste sequi in! Iure rem nulla soluta repellat, minima eos reprehenderit quod autem voluptatem fuga, est perferendis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Lorem, ipsum.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article> 
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/2.png"></div>
+            </div>
+            <section>
+              <div class="sta-slideGrupos_elems_title">Programa de formación interna</div>              
+              Invertir en formación no solo asegura el cumplimiento de los estándares de calidad establecidos por el grupo, sino que también mejora la experiencia y el servicio que reciben nuestros clientes. Además, desempeña un papel fundamental en garantizar un cumplimiento de las normativas internas y externas, contribuyendo a la excelencia operativa.
+            </section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Proyecto Creciendo juntos</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Proyecto</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/3.png"></div>
+            </div>
+            <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius totam exercitationem, nihil ullam officia tenetur dignissimos aspernatur ut officiis minima illo possimus deleniti nobis accusamus nemo tempore error. Reiciendis, repellendus voluptatibus fuga possimus facilis debitis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>lorem</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/4.png"></div>
+            </div>
+            <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi culpa, necessitatibus, iure ipsa eum ipsum distinctio nulla corrupti, esse aliquam neque? Vel voluptatibus quaerat provident, assumenda rem veritatis velit, ipsa totam voluptates nemo, consequuntur nesciunt. Eum quas doloremque iste sequi in! Iure rem nulla soluta repellat, minima eos reprehenderit quod autem voluptatem fuga, est perferendis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Lorem, ipsum.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article> 
+
+          <!-- END menu_row -->
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+<!--hijo 2-->
+<div class="tpl-slideGrupos scroll_2" id="scroll_2">
+  <div class="sta-slideGrupos_max">
+    <div class="sta-slideGrupos_title">
+      Formación <span class="title-sgh2">y</span> empleabilidad
+    </div>
+    <div class="sta-slideGrupos_subTitle">
+      Grupo Hotusa impulsa la retención y el desarrollo profesional mediante un plan estratégico que armoniza las metas y las aspiraciones individuales. Este enfoque refuerza la conexión entre el crecimiento personal y los objetivos de la empresa, fomentando un equipo comprometido y alineado con sus valores.
+    </div>
+    <article>
+      <header class="sta-slideGrupos_header">
+        <div class="sta-slideGrupos_slide">
+          <div class="swiper-button-next swiper-arrow"></div>
+          <div class="swiper-button-prev swiper-arrow"></div>
+          <ul class="sta-slideGrupos_headerNav swiper-wrapper">
+            <!-- BEGIN menu_row -->
+            <li class="form swiper-slide">
+              <button>FORMACIÓN INTERNA</button>
+            </li>
+
+            <li class="dual swiper-slide">
+              <button>FORMACIÓN DUAL</button>
+            </li>
+
+            <li class="uni swiper-slide">
+              <button>COLABORACIÓN UNIVERSITARIOS</button>
+            </li>
+            <!-- END menu_row -->
+          </ul>
+        </div>
+      </header>
+      <section class="sta-slideGrupos_sectionNav">
+        <div class="swiper-wrapper">
+        <!-- BEGIN menu_row -->
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/2.png"></div>
+            </div>
+            <section>
+              <div class="sta-slideGrupos_elems_title">Programa de formación interna</div>              
+              Invertir en formación no solo asegura el cumplimiento de los estándares de calidad establecidos por el grupo, sino que también mejora la experiencia y el servicio que reciben nuestros clientes. Además, desempeña un papel fundamental en garantizar un cumplimiento de las normativas internas y externas, contribuyendo a la excelencia operativa.
+            </section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Proyecto Creciendo juntos</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Proyecto</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/3.png"></div>
+            </div>
+            <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius totam exercitationem, nihil ullam officia tenetur dignissimos aspernatur ut officiis minima illo possimus deleniti nobis accusamus nemo tempore error. Reiciendis, repellendus voluptatibus fuga possimus facilis debitis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>lorem</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/4.png"></div>
+            </div>
+            <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi culpa, necessitatibus, iure ipsa eum ipsum distinctio nulla corrupti, esse aliquam neque? Vel voluptatibus quaerat provident, assumenda rem veritatis velit, ipsa totam voluptates nemo, consequuntur nesciunt. Eum quas doloremque iste sequi in! Iure rem nulla soluta repellat, minima eos reprehenderit quod autem voluptatem fuga, est perferendis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Lorem, ipsum.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article> 
+
+          <!-- END menu_row -->
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+<!--hijo 3-->
+<div class="tpl-slideGrupos scroll_3" id="scroll_3">
+  <div class="sta-slideGrupos_max">
+    <div class="sta-slideGrupos_title">
+      Formación <span class="title-sgh2">y</span> empleabilidad
+    </div>
+    <div class="sta-slideGrupos_subTitle">
+      Grupo Hotusa impulsa la retención y el desarrollo profesional mediante un plan estratégico que armoniza las metas y las aspiraciones individuales. Este enfoque refuerza la conexión entre el crecimiento personal y los objetivos de la empresa, fomentando un equipo comprometido y alineado con sus valores.
+    </div>
+    <article>
+      <header class="sta-slideGrupos_header">
+        <div class="sta-slideGrupos_slide">
+          <div class="swiper-button-next swiper-arrow"></div>
+          <div class="swiper-button-prev swiper-arrow"></div>
+          <ul class="sta-slideGrupos_headerNav swiper-wrapper">
+            <!-- BEGIN menu_row -->
+            <li class="form swiper-slide">
+              <button>FORMACIÓN INTERNA</button>
+            </li>
+
+            <li class="dual swiper-slide">
+              <button>FORMACIÓN DUAL</button>
+            </li>
+
+            <li class="uni swiper-slide">
+              <button>COLABORACIÓN UNIVERSITARIOS</button>
+            </li>
+            <!-- END menu_row -->
+          </ul>
+        </div>
+      </header>
+      <section class="sta-slideGrupos_sectionNav">
+        <div class="swiper-wrapper">
+        <!-- BEGIN menu_row -->
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/2.png"></div>
+            </div>
+            <section>
+              <div class="sta-slideGrupos_elems_title">Programa de formación interna</div>              
+              Invertir en formación no solo asegura el cumplimiento de los estándares de calidad establecidos por el grupo, sino que también mejora la experiencia y el servicio que reciben nuestros clientes. Además, desempeña un papel fundamental en garantizar un cumplimiento de las normativas internas y externas, contribuyendo a la excelencia operativa.
+            </section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Proyecto Creciendo juntos</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Proyecto</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/3.png"></div>
+            </div>
+            <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius totam exercitationem, nihil ullam officia tenetur dignissimos aspernatur ut officiis minima illo possimus deleniti nobis accusamus nemo tempore error. Reiciendis, repellendus voluptatibus fuga possimus facilis debitis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem, ipsum dolor.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>lorem</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article>
+
+          <article class="sta-slideGrupos_elems swiper-slide">
+            <div class="sta-slideGrupos_bckCont">
+              <div class="sta-slideGrupos_bck swiper-lazy" data-background="../imgs/4.png"></div>
+            </div>
+            <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi culpa, necessitatibus, iure ipsa eum ipsum distinctio nulla corrupti, esse aliquam neque? Vel voluptatibus quaerat provident, assumenda rem veritatis velit, ipsa totam voluptates nemo, consequuntur nesciunt. Eum quas doloremque iste sequi in! Iure rem nulla soluta repellat, minima eos reprehenderit quod autem voluptatem fuga, est perferendis.</section>
+            <footer>
+              <div class="swiper_activities">Actividades en curso</div>
+              <div class="swiper_activities_desc">
+                <!-- BEGIN menu_hijo_row -->
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+
+                <ul>
+                  <li>Lorem, ipsum.</li>
+                  <li><a href="" class="ver_video">Ver video</a></li>
+                </ul>
+                <!-- END menu_hijo_row -->
+              </div>
+
+            </footer>
+          </article> 
+
+          <!-- END menu_row -->
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+
+<!-- 3 minutos doble swiper -->
+<div class="tpl-slideGrupos scroll_8" id="scroll_8">
+  <div class="sta-slideGrupos_max">
+    <div class="sta-slideGrupos_title">Grupo Hotusa en 3 minutos</div>
+    <div class="sta-slideGrupos_subTitle">Conoce a través de las palabras del presidente de la compañía Amancio López la visión de Grupo Hotusa en los distintos ámbitos de actividad.</div>
+    <article>
+      <header class="sta-slideGrupos_header">
+        <div class="sta-slideGrupos_slide">
+          <div class="swiper-button-next swiper-arrow"></div>
+          <div class="swiper-button-prev swiper-arrow"></div>
+          <ul class="sta-slideGrupos_headerNav swiper-wrapper">
+              <!--MENU_PRODUCTO-->
+              <!-- BEGIN menu_row -->
+              <li class="form swiper-slide">
+                <button>FORMACIÓN</button>
+              </li>
+  
+              <li class="dual swiper-slide">
+                <button>SOSTENIBILIDAD E INNOVACIÓN</button>
+              </li>
+  
+              <li class="uni swiper-slide">
+                <button>TURISMO Y DESARROLLO URBANO</button>
+              </li>
+  
+              <li class="uni2 swiper-slide">
+                <button>PATRIMONIO CULTURAL</button>
+              </li>
+              <!-- END menu_row -->
+            </ul>
+          </div>
+      </header>
+      <section class="sta-slideGrupos_sectionNav">
+        <div class="swiper-wrapper">
+          <!-- BEGIN menu_row -->
+            <article class="sta-slideGrupos_elems_3min swiper-slide">
+              <div class="sta-slideGrupos_elems_3min_max">
+                <!-- BEGIN menu_hijo_row -->
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 1.1</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 1.2</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 1.3</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 1.4</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                <!-- END menu_hijo_row -->
+              </div>
+            </article>
+            <article class="sta-slideGrupos_elems_3min swiper-slide">
+              <div class="sta-slideGrupos_elems_3min_max">
+                <!-- BEGIN menu_hijo_row -->
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 2.1</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 2.2</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 2.3</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 2.4</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                <!-- END menu_hijo_row -->
+              </div>
+            </article>
+            <article class="sta-slideGrupos_elems_3min swiper-slide">
+              <div class="sta-slideGrupos_elems_3min_max">
+                <!-- BEGIN menu_hijo_row -->
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 3.1</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 3.2</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 3.3</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 3.4</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                <!-- END menu_hijo_row -->
+              </div>
+            </article>
+            <article class="sta-slideGrupos_elems_3min swiper-slide">
+              <div class="sta-slideGrupos_elems_3min_max">
+                <!-- BEGIN menu_hijo_row -->
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 4.1</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 4.2</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 4.3</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper_3min">
+                    <div class="swiper_3min_max">
+                      <div class="swiper_3min_title">Hablamos de…</div>
+                      <div class="swiper_3min_text">modulo 4.4</div>
+                      <a href="#" class="swiper_3min_play"><svg id="Grupo_7340" data-name="Grupo 7340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.896" height="32.069" viewBox="0 0 32.896 32.069">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectángulo_1498" data-name="Rectángulo 1498" width="32.896" height="32.069" fill="#00a79b"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Grupo_7339" data-name="Grupo 7339" clip-path="url(#clip-path)">
+                          <path id="Trazado_53474" data-name="Trazado 53474" d="M16.448,32.069a16.711,16.711,0,0,1-6.4-1.26,16.422,16.422,0,0,1-5.228-3.436,15.965,15.965,0,0,1-3.525-5.1,15.713,15.713,0,0,1,0-12.483A15.964,15.964,0,0,1,4.818,4.7,16.422,16.422,0,0,1,10.046,1.26a16.893,16.893,0,0,1,12.805,0A16.423,16.423,0,0,1,28.079,4.7a15.964,15.964,0,0,1,3.525,5.1,15.712,15.712,0,0,1,0,12.483,15.964,15.964,0,0,1-3.525,5.1,16.422,16.422,0,0,1-5.228,3.436,16.711,16.711,0,0,1-6.4,1.26m0-30.845a15.434,15.434,0,0,0-5.913,1.164A15.17,15.17,0,0,0,5.705,5.562,14.747,14.747,0,0,0,2.449,10.27a14.517,14.517,0,0,0,0,11.529,14.747,14.747,0,0,0,3.256,4.708,15.171,15.171,0,0,0,4.829,3.174,15.608,15.608,0,0,0,11.827,0,15.171,15.171,0,0,0,4.829-3.174A14.747,14.747,0,0,0,30.447,21.8a14.517,14.517,0,0,0,0-11.529,14.747,14.747,0,0,0-3.256-4.708,15.17,15.17,0,0,0-4.829-3.174,15.435,15.435,0,0,0-5.913-1.164" transform="translate(0)" fill="#00a79b"/>
+                          <path id="Trazado_53475" data-name="Trazado 53475" d="M322.327,226.074l-10.068,7.076a1.767,1.767,0,0,1-2.8-1.395V217.6a1.767,1.767,0,0,1,2.8-1.395l10.068,7.076a1.694,1.694,0,0,1,0,2.789" transform="translate(-298.823 -208.645)" fill="#00a79b"/>
+                        </g>
+                      </svg>
+                      </a>
+                    </div>
+                  </div>
+                <!-- END menu_hijo_row -->
+              </div>
+            </article>
+          <!-- END menu_row -->
+        </div>
+      </section>  
+      </div>
+    </article>
+  </div>
+</div>
+
 </main>
   <footer>
     <div class="tpl-footer-gh">

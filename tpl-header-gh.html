@@ -1,0 +1,77 @@
+<div class="tpl-header-gh">
+  <input type="checkbox" id="sta-header-gh_nav" class="sta-inputFixed" aria-label="open nav">
+  <div class="sta-header-gh_abs">
+    <div class="sta-header-gh_max">
+
+      <div class="sta-header-gh_table">
+        <div class="sta-header-gh_cell sta-header-gh_logo">
+          <a href="{_URL_INDICE}">
+            {_web_oficial}
+          </a>
+        </div>
+        <div class="sta-header-gh_nav sta-header-gh_cell">
+          <ul class="sta-header-gh_contNav"></ul>
+        </div>
+
+        <div class="sta-header-gh_cell sta-header-gh_ver">
+          <label for="sta-header-gh_nav" class="sta-header-gh_hambur">
+            <span class="sta-header-gh_hamburText">{_ver_mas}</span>
+            <span class="sta-header-gh_hamburIcon">
+              <span></span>
+            </span>
+          </label>
+        </div>
+        <div class="sta-header-gh_cell sta-header-gh_lang">
+          {_IDIOMAS}
+        </div>
+      </div>
+
+    </div>
+    <div class="sta-header-gh_fixed">
+      <label for="sta-header-gh_nav" class="sta-header-gh_fondo"></label>
+      <div class="sta-header-gh_lateral">
+        <div class="sta-header-gh_table">
+          <div class="sta-header-fhe_cell sta-header-fhe_logo">
+            <a href="{_URL_INDICE}">
+              {_web_oficial}
+            </a>
+          </div>
+          <div class="sta-header-gh_cell sta-header-gh_ver">
+            <label for="sta-header-gh_nav" class="sta-header-gh_hambur">
+              <span class="sta-header-gh_hamburIcon">
+                <span></span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="sta-header-gh_table2">
+
+          <div class="sta-header-gh_cell2">
+            <ul class="sta-header-gh_lateralNav">
+              <!-- BEGIN menu_row -->
+              <li class="sta-header-gh_liNav {_MENU_HIJO_XT_HEADER_CLASE}">
+                <input type="checkbox" class="sta-inputFixed" id="sta-header-gh_id_{_MENU_HIJO_ID_PROD}">
+                <a class="sta-header-gh_nombreSeccion" href="{_MENU_HIJO_URL_PROD}">
+                  <span>{_MENU_HIJO_XT_HEADER_TITULO}</span>
+                </a>
+                <label for="sta-header-gh_id_{_MENU_HIJO_ID_PROD}" class="sta-header-gh_labelSeccion"></label>
+                <ul class="sta-header-gh_liSubNav">
+                  <!-- BEGIN menu_hijo_row -->
+                    <li>
+                      <a href="{_MENU_HIJO_HIJO_URL_PROD}">{_MENU_HIJO_HIJO_XT_HEADER_TITULO}</a>
+                    </li>
+                  <!-- END menu_hijo_row -->
+                </ul>
+              </li>
+              <!-- END menu_row -->
+            </ul>
+            <div class="sta-header-gh_lang">
+              {_IDIOMAS}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
