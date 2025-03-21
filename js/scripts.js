@@ -2741,3 +2741,19 @@ var openModalMultiVideos = (function (o, btns, $, h) {
 })(document.querySelector('.tpl-liServices.navegacion'), window.hotusa && hotusa());
 
 
+((lis, hotusa) => {
+  if (!s.length ||!hotusa) return false;
+  lis.forEach((li)=>{
+    li.addEventListener('click', function () {
+      const idS = li.id;
+      const modal = document.querySelectorAll('.tpl-slideGrupos');
+      modal.forEach((m) => {
+        m.classList.remove('sta-active');
+        if (m.id === idS) {
+          m.classList.add('sta-active');
+        }
+      });
+    })
+  })
+
+})(document.querySelectorAll('.sta-liServices_element'), window.hotusa && hotusa());
