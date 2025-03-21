@@ -453,7 +453,7 @@
       .tpl-slideGrupos section .sta-slideGrupos_elems .sta-slideGrupos_elems_title{display:block;font:500 18px/20px var(--roboto);color:var(--sgh-color2);margin-bottom:20px}
       .tpl-slideGrupos .sta-slideGrupos_subTitle{max-width:800px;margin:20px auto 50px}
       .tpl-slideGrupos .sta-slideGrupos_max{margin:0 43px}
-      .tpl-slideGrupos section .sta-slideGrupos_elems{box-sizing: border-box;display: grid;grid-template-columns: repeat(2, 1fr);grid-template-rows: repeat(3, 1fr);}
+      .tpl-slideGrupos section .sta-slideGrupos_elems{box-sizing: border-box;display: grid;grid-template-columns:1fr 2fr;grid-template-rows:2fr 1fr;}
       .tpl-slideGrupos section .sta-slideGrupos_elems header .sta-slideGrupos_subTitle2{font-size:18px}
       .tpl-slideGrupos section .sta-slideGrupos_bckCont{right:auto;height:auto;top:20px;bottom:20px;width:390px;overflow:hidden;z-index:1;grid-row: span 3 / span 3;}
       .tpl-slideGrupos section .sta-slideGrupos_bck{transition:transform .5s}
