@@ -259,8 +259,12 @@ var readMore = (function (a, h) {
     };
   };
 })(document.querySelector('.tpl-header-gh'), window.jQuery, window.hotusa && hotusa());
-
-
+//añadir url a los enlaces con scroll
+document.addEventListener("DOMContentLoaded", function() {
+  var url = window.location.href;
+  document.getElementById("site-url").href = url;
+  document.getElementById("site-url").textContent = url;
+});
 
 
 var servlet = (function (o, $, h) {
@@ -2742,7 +2746,7 @@ var openModalMultiVideos = (function (o, btns, $, h) {
 
 
 ((lis, hotusa) => {
-  if (!s.length ||!hotusa) return false;
+  if (!lis.length ||!hotusa) return false;
   lis.forEach((li)=>{
     li.addEventListener('click', function () {
       const idS = li.id;
