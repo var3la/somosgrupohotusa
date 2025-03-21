@@ -227,7 +227,7 @@
   .tpl-cabeText.sta-active .sta-cabeText_back{width: 550px;height: 587px;margin: 75px 0 0 0;}
   .tpl-cabeText article .fn-readMore_content{column-count: 1;}}
 @media(min-width: 1101px){
-  .tpl-cabeText{padding:0 40px 70px;}
+  .tpl-cabeText{padding:0 40px 70px;max-width: 1283px;margin: 0 auto;}
   .tpl-cabeText .sta-cabeText_textMax{padding-left:0;}
   .tpl-cabeText .sta-cabeText_textMax section{max-width:536px;}
   
