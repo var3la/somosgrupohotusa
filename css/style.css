@@ -769,8 +769,8 @@
 @media(min-width:1101px){ 
   .tpl-liServices .sta-liServices_eleText{width:167px;height:237px;}
   .tpl-liServices .sta-liServices_max{margin:75px 40px 40px;}
-  .tpl-liServices.js-active .sta-liServices_element{padding: 12px;display:flex;justify-content: center;max-width:1000px;margin:0 auto;}
-  /* .tpl-liServices .sta-liServices_element{width:32%;width:calc((100% / 3) - (260px / 3))} */
+  .tpl-liServices.js-active .sta-liServices_element{padding: 12px;display:flex;justify-content: center;}
+  .tpl-liServices .sta-liServices_list{max-width:1000px;margin:0 auto;}
   .tpl-liServices .sta-liServices_element:nth-of-type(even),
   .tpl-liServices .sta-liServices_element{margin-right:0px}
   .tpl-liServices .sta-liServices_element:nth-of-type(3n){margin-right:0}
