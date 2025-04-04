@@ -2611,6 +2611,10 @@ var openModalMultiVideos = (function (o, btns, $, h) {
   
   var cargaScrollAuto = function (o) {
     hotusa.cargaScrollAuto({ obj: o, dual: true }, function () {
+      const bg = o.dataset.bck;
+      if (bg) {
+        o.style.backgroundImage = 'url(' + bg + ')';
+      }
       o.classList.add('js-active');
       o.querySelectorAll('.sta-liServices_back').forEach(function(back) {
         back.style.backgroundImage = 'url(' + back.dataset.img + ')';
