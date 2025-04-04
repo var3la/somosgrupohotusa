@@ -188,7 +188,7 @@
 .tpl-cabeText .sta-cabeText_button.sta-show{display: inline-block;}
 .tpl-cabeText .sta-cabeText_button:hover.fn-readMore_bShort:after{margin-top: 0px;}
 .tpl-cabeText .sta-cabeText_button:hover.fn-readMore_bLong:after{margin-top: -12px;}
-.tpl-cabeText .sta-cabeText_firma{color: #fff;font-size: 10px;padding: 20px 0 0;position: absolute;z-index: 1;bottom: 10px;left: 10px;}
+.tpl-cabeText .sta-cabeText_firma{color: #fff;font-size:12px;padding: 20px 0 0;position: absolute;z-index: 1;bottom: 23px;left:20px;font-weight: 100;}
 @media(min-width:821px){
   .tpl-cabeText.js-displayNone{display: block;}
   .tpl-cabeText article header{font-size: 30px;}
@@ -207,7 +207,7 @@
   .tpl-cabeText .sta-cabeText_goDown:hover:before,
   .tpl-cabeText .sta-cabeText_goDown:focus:before{animation:tplCabeText_arrow 2s linear infinite}
   .tpl-cabeText .sta-cabeText_back{position:relative;width:50%;height:auto}
-  .tpl-cabeText.sta-active .sta-cabeText_back{width: 550px;height: 587px;margin: 75px 0 0 0;}
+  .tpl-cabeText.sta-active .sta-cabeText_back{width: 547px;height:465px;margin: 75px 0 0 0;}
   .tpl-cabeText article .fn-readMore_content{column-count: 1;}}
 @media(min-width: 1101px){
   .tpl-cabeText{padding:0 95px 75px 40px;}
