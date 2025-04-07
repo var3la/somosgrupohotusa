@@ -393,7 +393,7 @@
 /* FIN tpl-footer-gh */
 
     /* .tpl-slideGrupos */
-    .tpl-slideGrupos{display:none;transition: .5s;}
+    .tpl-slideGrupos{transition: .5s;}
     .tpl-slideGrupos:first-of-type{padding-top:135px;}
     .tpl-slideGrupos{background:#fff;padding-bottom:20px;}
     .tpl-slideGrupos:nth-child(even){background:#f5f5f5;}
@@ -411,7 +411,7 @@
     .tpl-slideGrupos .sta-slideGrupos_subTitle{text-align:center;font:15px var(--roboto);margin:20px 25px 0;color:var(--text-color)}
     .tpl-slideGrupos .swiper_activities{font:500 14px/25px var(--spectra);color:var(--sgh-color);text-align:center;border-bottom:1px solid var(--sgh-color2);}
     .tpl-slideGrupos .swiper_activities_desc{padding-top:10px;text-align:center;color:var(--sgh-color2)}
-    .tpl-slideGrupos .swiper_activities_desc ul {padding-right:0;display: flex;flex-direction: column;justify-content: space-between;}
+    .tpl-slideGrupos .swiper_activities_desc ul {padding-right:0;display: flex;flex-direction: column;justify-content: space-between;align-items: center;}
     .tpl-slideGrupos .swiper_activities_desc ul > li{font-family:var(--montserrat);padding-bottom:10px;max-width: 200px;}
     .tpl-slideGrupos .swiper_activities_desc ul > li svg{width:113px;height:53px;}
 
@@ -445,7 +445,7 @@
       .tpl-slideGrupos .swiper_activities_desc,
       .tpl-slideGrupos .swiper_activities{text-align:left;}
       .tpl-slideGrupos .swiper_activities_desc{display:flex;}
-      .tpl-slideGrupos .swiper_activities_desc ul {padding-right:25px;}
+      .tpl-slideGrupos .swiper_activities_desc ul {padding-right:25px;align-items: flex-start;}
       .tpl-slideGrupos .sta-slideGrupos_max .sta-slideGrupos_sectionNav{padding:20px 0 0;}
       .tpl-slideGrupos section .sta-slideGrupos_elems .sta-slideGrupos_elems_title{display:block;font:500 18px/20px var(--roboto);color:var(--sgh-color2);margin-bottom:20px}
       .tpl-slideGrupos .sta-slideGrupos_subTitle{max-width:800px;margin:20px auto 50px}
@@ -1111,7 +1111,7 @@
 .tpl-modalVideoMulti-gh .sta-modalVideoMulti-gh_listaVideo button{display: block;width: 100%;height: 100%;padding-top: 120px;}
 .tpl-modalVideoMulti-gh .sta-modalVideoMulti-gh_overflow{position: absolute;top: 0; right: 0;left: 0;height:110px;overflow: hidden;}
 .tpl-modalVideoMulti-gh .sta-modalVideoMulti-gh_listaImg{background-position: center;background-repeat: no-repeat;background-size: cover;position: absolute;top:0;right:0;left:0;bottom:0;transition: .3s;}
-.tpl-modalVideoMulti-gh .sta-modalVideoMulti-gh_listaTitulo{font: 12px "Montserrat", sans-serif;color: #fff;display: block;}
+.tpl-modalVideoMulti-gh .sta-modalVideoMulti-gh_listaTitulo{font: 12px var(--montserrat), sans-serif;color: #fff;display: block;}
 .tpl-modalVideoMulti-gh .sta-modalVideoMulti-gh_listaVideo.sta-active .sta-modalVideoMulti-gh_listaTitulo{font-weight: bold;}
 @media(min-width: 401px){
   .tpl-modalVideoMulti-gh .sta-modalVideoMulti-gh_listaVideo {width: calc(50% + 40px);}
